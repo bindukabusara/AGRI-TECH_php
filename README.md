@@ -1,2 +1,2 @@
-# AGRI-TECH_php
- AGRI-TECH_backend
+# AGRI-TECH
+ for the agritech project

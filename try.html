@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+<label for="product">Product:</label>
+<select id="product" name="product">
+    <option value="">-- Select a product --</option>
+    <option value="beans">Beans</option>
+    <option value="rice">Rice</option>
+    <option value="wheat">Wheat</option>
+</select>
+
+<label for="quantity">Quantity:</label>
+<input type="number" id="quantity" name="quantity">
+
+<label for="totalCost">Total Cost:</label>
+<input type="number" id="totalCost" name="totalCost" disabled>
+
+
+<script>
+    // Get references to the input fields
+    const productSelect = document.getElementById('product');
+    const quantityInput = document.getElementById('quantity');
+    const totalCostInput = document.getElementById('totalCost');
+
+    // Add an event listener to detect changes in the inputs
+    productSelect.addEventListener('change', updateTotalCost);
+    quantityInput.addEventListener('input', updateTotalCost);
+
+    function updateTotalCost() {
+        // Get the selected product and quantity entered by the user
+        const selectedProduct = productSelect.value;
+        const quantity = parseFloat(quantityInput.value);
+
+        // Define the unit cost based on the selected product
+        let unitCost;
+        if (selectedProduct === 'beans') {
+            unitCost = 5.99; // Sample unit cost for beans
+        } else if (selectedProduct === 'rice') {
+            unitCost = 3.99; // Sample unit cost for rice
+        } else if (selectedProduct === 'wheat') {
+            unitCost = 4.99; // Sample unit cost for wheat
+        } else {
+            unitCost = 0; // If no product is selected, set the unit cost to 0
+        }
+
+        // Perform the multiplication and update the total cost field
+        const totalCost = unitCost * quantity;
+        totalCostInput.value = isNaN(totalCost) ? '' : totalCost.toFixed(2);
+    }
+</script>
+</body>
+</html>
