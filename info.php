@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="Uganda Christian University.css">
+    <style>
+        /* Responsive styles */
+        /* Small screens */
+        @media screen and (max-width: 576px) {
+            .navlist ul {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .navlist ul li {
+                margin-bottom: 2px;
+            }
+
+            .container.forms {
+                width: 10%;
+                max-width: 200px;
+                margin: 0 auto;
+                background-color: #fff;
+            }
+        }
+
+        /* Medium screens */
+        @media screen and (min-width: 577px) and (max-width: 992px) {
+            .navlist ul {
+                justify-content: center;
+            }
+        }
+
+        /* Large screens */
+        @media screen and (min-width: 993px) {
+            .navlist ul {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navlist">
+        <div class="sub">
+            <ul>
+                <li>
+                    <h1>Agri<span>Trans</span></h1>
+                </li>
+                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container forms">
+        <h1>Agri<span>Trans</span></h1>
+        <div class="form login">
+            <div class="form-content">
+                <h2>DETAILS ABOUT PRODUCT</h2>
+                <p id="welcomeMessage"></p><br>
+
+                <div id="productDetails"></div>
+
+            </div>
+            <div class="field button-field">
+                <button><strong>OK</strong></button>
+            </div><br>
+            <div class="field button-field">
+           <button style="background-color: red;"><strong>cancel</strong></button>
+            </div><br>
+        </div>
+
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        window.onload = function () {
+            // Get the query parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const product = urlParams.get('product');
+            const quantity = urlParams.get('quantity');
+            const cost = urlParams.get('cost');
+
+            // Update the welcome message
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            welcomeMessage.textContent = `Hey, ${name}! you want to sell ${quantity} KG of ${product} to the unit cost of ${cost} SHS and expect your payment in few days `;
+        };
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+/* Google Fonts - Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
+}
+
+.navlist {
+    width: 100%;
+    background: #2E6140;
+    position: fixed;
+    padding: 5px 5px;
+
+}
+
+.nav {
+    background-color: #fff;
+
+}
+
+.nav ul a {
+    font-family: 'Bree Serif', serif;
+    color: #fff;
+
+}
+
+.navlist ul {
+    display: flex;
+    list-style: none;
+}
+
+.navlist ul li:first-child {
+    flex: 1;
+}
+
+span {
+    color: #A7F500;
+}
+
+.navlist ul a {
+    margin-left: 20px;
+    font-size: 50px;
+    font-family: 'Bree Serif', serif;
+    font-size: large;
+    color: #fff;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.navlist ul a:hover {
+    color: #E98A15;
+}
+
+.navlist ul li {
+    margin: 5px;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.navlist ul li:after {
+    display: block;
+}
+
+.navlist ul li:hover:after {
+    transform: scaleX(1);
+}
+
+.container h1 {
+    font-family: 'Bree Serif', serif;
+    margin-bottom: 50px;
+    word-spacing: 50px;
+    font-size: 50px;
+    color: #fff;
+}
+
+.container p {
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    background-color: #2E6140;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+
+}
