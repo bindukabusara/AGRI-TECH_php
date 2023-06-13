@@ -88,10 +88,15 @@
         </h1>
         <p>Hey! Welcome to AgriTrans, we help farmers sell food and market vendors buy food.</p><br>
         <br><br><br>
+
         <div class="field button-field">
-            <center><button><a href="log.php"><strong style="color: rgb(0, 0, 0);">Log In</strong></a></button>
+            <center>
+                <form action="log.php" method="post">
+                    <button type="submit"><strong style="color: rgb(0, 0, 0);">Log In</strong></button>
+                </form>
             </center>
         </div>
+
         <div class="form-link">
             <span>Don't have an account? <a href="signup.php" class="signup-link"><strong style="color: #A7F500;">Sign up</strong></a></span>
         </div>
