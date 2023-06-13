@@ -72,7 +72,7 @@
                 <li>
                     <h1>Agri<span>Trans</span></h1>
                 </li>
-                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="home.php"><b>Home</b></a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">About Us</a></li>
             </ul>
@@ -92,7 +92,7 @@
         <div class="field button-field">
             <center>
                 <form action="log.php" method="post">
-                    <button type="submit"><strong style="color: rgb(0, 0, 0);">Log In</strong></button>
+                    <button type="submit"><strong style="color: rgb(0, 0, 0);"><a href="log.php">Log In</a></strong></button>
                 </form>
             </center>
         </div>

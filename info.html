@@ -10,7 +10,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="Uganda Christian University.css">
-
     <style>
         /* Responsive styles */
         /* Small screens */
@@ -47,6 +46,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                 <li>
                     <h1>Agri<span>Trans</span></h1>
                 </li>
-                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="home.php"><b>Home</b></a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">About Us</a></li>
             </ul>
@@ -68,12 +68,12 @@
         <h1>Agri<span>Trans</span></h1>
         <div class="form login">
             <div class="form-content">
-                <h2>DETAILS ABOUT YOUR ORDER</h2>
-                <p id="welcomeMessage"></p>
+                <h2>DETAILS ABOUT PRODUCT</h2>
+                <p id="welcomeMessage"></p><br>
 
                 <div id="productDetails"></div>
 
-            </div><br>
+            </div>
             <div class="field button-field">
                 <button><strong>OK</strong></button>
             </div><br>
@@ -89,15 +89,14 @@
         window.onload = function () {
             // Get the query parameters from the URL
             const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
             const product = urlParams.get('product');
             const quantity = urlParams.get('quantity');
-            const totalCost = urlParams.get('totalCost');
-console.log('******************************************************************')
-            console.log(totalCost)
-            // Update the welcome message
-            const productDetails = document.getElementById('productDetails');
-            productDetails.innerHTML = `Hey! you ordered ${quantity} KG of ${product} ${totalCost}`;
+            const cost = urlParams.get('cost');
 
+            // Update the welcome message
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            welcomeMessage.textContent = `Hey, ${name}! you want to sell ${quantity} KG of ${product} to the unit cost of ${cost} SHS and expect your payment in few days `;
         };
     </script>
 

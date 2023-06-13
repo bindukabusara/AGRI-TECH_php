@@ -84,7 +84,7 @@ if (isset($_POST['submit'])) {
                 <li>
                     <h1>Agri<span>Trans</span></h1>
                 </li>
-                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="home.php"><b>Home</b></a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">About Us</a></li>
             </ul>
