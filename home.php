@@ -89,7 +89,7 @@
         <p>Hey! Welcome to AgriTrans, we help farmers sell food and market vendors buy food.</p><br>
         <br><br><br>
         <div class="field button-field">
-            <center><button><a href="log.html"><strong style="color: rgb(0, 0, 0);">Log In</strong></a></button>
+            <center><button><a href="log.php"><strong style="color: rgb(0, 0, 0);">Log In</strong></a></button>
             </center>
         </div>
         <div class="form-link">
