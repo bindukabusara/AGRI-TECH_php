@@ -91,14 +91,14 @@
 
         <div class="field button-field">
             <center>
-                <form action="log.php" method="post">
+                <form>
                     <button type="submit"><strong style="color: rgb(0, 0, 0);"><a href="log.php">Log In</a></strong></button>
                 </form>
             </center>
         </div>
 
         <div class="form-link">
-            <span>Don't have an account? <a href="signup.php" class="signup-link"><strong style="color: #A7F500;">Sign up</strong></a></span>
+            <span>Don't have an account? <a href="singup.php" class="signup-link"><strong style="color: #A7F500;">Sign up</strong></a></span>
         </div>
     </section>
 

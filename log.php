@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li>
                     <h1>Agri<span>Trans</span></h1>
                 </li>
-                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="home.php"><b>Home</b></a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">About Us</a></li>
             </ul>
@@ -129,15 +129,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="form-link">
-                        <span>Don't have an account? <a href="singup.html" class="signup-link">Sign up</a></span>
+                        <span>Don't have an account? <a href="singup.php" class="signup-link">Sign up</a></span>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Javascript -->
-    <script src="script.js"></script>
+
 </body>
 
 </html>

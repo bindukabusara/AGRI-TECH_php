@@ -92,11 +92,11 @@
             const product = urlParams.get('product');
             const quantity = urlParams.get('quantity');
             const totalCost = urlParams.get('totalCost');
-console.log('******************************************************************')
+
             console.log(totalCost)
             // Update the welcome message
             const productDetails = document.getElementById('productDetails');
-            productDetails.innerHTML = `Hey! you ordered ${quantity} KG of ${product} ${totalCost}`;
+            productDetails.innerHTML = `Hey! you ordered ${quantity} KG of ${product} at a total cost of ${totalCost} SHS`;
 
         };
     </script>
