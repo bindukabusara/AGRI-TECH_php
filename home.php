@@ -92,7 +92,7 @@
         <div class="field button-field">
             <center>
                 <form>
-                    <button type="submit"><strong style="color: rgb(0, 0, 0);"><a href="log.php">Log In</a></strong></button>
+                    <button type="submit"><a href="log.php"><strong style="color: rgb(0, 0, 0);">Log In</strong></a></button>
                 </form>
             </center>
         </div>

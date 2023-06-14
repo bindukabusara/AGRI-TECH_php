@@ -2,7 +2,7 @@
 $connection = new mysqli('localhost', 'root', '', 'agri-tech');
 
 if ($connection) {
-    echo "Connection established";
+    echo "";
 } else {
     die(mysqli_error($connection));
 }
