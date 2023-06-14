@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 
-
+<!--code HTML-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Boxicons css-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--code css wich makes the page reponsive-->
     <style>
         /* Responsive styles */
         /* Small screens */
