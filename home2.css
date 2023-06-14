@@ -76,7 +76,7 @@ span {
     font-family: 'Bree Serif', serif;
     margin-bottom: 10px;
     word-spacing: 10px;
-    font-size: 95px;
+    font-size: 100px;
     color: #fff;
 }
 
@@ -96,13 +96,7 @@ span {
     background-size: cover;
     background-position: center;
 }
-h1 {
-    font-size: 40px;
-    font-weight: 700;
-    color: rgb(255, 255, 255);
-    font-family:roboto;
 
-}
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -110,7 +104,15 @@ body {
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 900;
     color: rgb(255, 255, 255);
     /* Use a specific font weight if desired */
+}
+.button-container {
+    text-align: center;
+}
+
+.button-container button {
+    display: inline-block;
+    margin-right: 10px;
 }

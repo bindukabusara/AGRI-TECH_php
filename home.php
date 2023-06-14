@@ -84,24 +84,27 @@
     <section class="container">
         <br>
         <hr>
-        <br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br>
         <h1>
             <center>Trade food easly</center>
         </h1>
         <p>AgriTrans: Connecting farmers and market vendors <br>for efficient food sales and purchases.</p><br>
-        <br><br><br>
+        <br>
 
         <div class="field button-field">
             <center>
                 <form>
-                    <button type="submit"><a href="log.php"><strong style="color: rgb(0, 0, 0);">Log In</strong></a></button>
+                    <div class="button-container">
+                        <button type="submit"><a href="log.php"><strong style="color: rgb(0, 0, 0);">LOG IN</strong></a></button>
+                        <button type="submit"><a href="singup.php"><strong style="color: rgb(0, 0, 0);">SIGN UP</strong></a></button>
+                    </div>
+
+
                 </form>
             </center>
         </div>
 
-        <div class="form-link">
-            <span>Don't have an account? <a href="singup.php" class="signup-link"><strong style="color: #A7F500;">Sign up</strong></a></span>
-        </div>
+
     </section>
 
 </body>
