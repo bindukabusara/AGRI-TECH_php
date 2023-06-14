@@ -10,6 +10,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="home2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
 
     <style>
         /* Responsive styles */
@@ -84,9 +86,9 @@
         <hr>
         <br><br><br><br><br><br><br><br><br><br><br>
         <h1>
-            <center>WELCOME</center>
+            <center>Trade food easly</center>
         </h1>
-        <p>Hey! Welcome to AgriTrans, we help farmers sell food and market vendors buy food.</p><br>
+        <p>AgriTrans: Connecting farmers and market vendors <br>for efficient food sales and purchases.</p><br>
         <br><br><br>
 
         <div class="field button-field">

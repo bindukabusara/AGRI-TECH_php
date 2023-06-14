@@ -89,6 +89,7 @@
         window.onload = function () {
             // Get the query parameters from the URL
             const urlParams = new URLSearchParams(window.location.search);
+             const name = urlParams.get('name');
             const product = urlParams.get('product');
             const quantity = urlParams.get('quantity');
             const totalCost = urlParams.get('totalCost');
@@ -96,7 +97,7 @@
             console.log(totalCost)
             // Update the welcome message
             const productDetails = document.getElementById('productDetails');
-            productDetails.innerHTML = `Hey! you ordered ${quantity} KG of ${product} at a total cost of ${totalCost} SHS`;
+            productDetails.innerHTML = `Hey${name}! you ordered ${quantity} KG of ${product} at a total cost of ${totalCost} SHS`;
 
         };
     </script>
