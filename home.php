@@ -86,7 +86,7 @@
         <hr>
         <br><br><br><br><br><br><br>
         <h1>
-            <center>Trade food easly</center>
+            <center>Trade food easily</center>
         </h1>
         <p>AgriTrans: Connecting farmers and market vendors <br>for efficient food sales and purchases.</p><br>
         <br>
