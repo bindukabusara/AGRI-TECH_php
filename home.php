@@ -84,7 +84,7 @@
     <section class="container">
         <br>
         <hr>
-        <br><br><br><br><br><br><br>
+        <br><br><br><br><br>
         <h1>
             <center>Trade food easily</center>
         </h1>
@@ -95,8 +95,8 @@
             <center>
                 <form>
                     <div class="button-container">
-                        <button type="submit"><a href="log.php"><strong style="color: rgb(0, 0, 0);">LOG IN</strong></a></button>
-                        <button type="submit"><a href="singup.php"><strong style="color: rgb(0, 0, 0);">SIGN UP</strong></a></button>
+                        <button class="button" type="submit"><a href="log.php"><strong style="color: #fff;">LOG IN</strong></a></button>
+                        <button class="button" type="submit"><a href="singup.php"><strong style="color: #fff;">SIGN UP</strong></a></button>
                     </div>
 
 

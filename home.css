@@ -134,7 +134,7 @@ a {
 .field button {
     height: 100%;
     width: 10%;
-    border: rgb(0, 0, 0);
+    border: rgb(255, 255, 255);
     font-size: 22px;
     font-weight: 500;
     border-radius: 10px;
@@ -154,3 +154,37 @@ a {
     text-decoration: underline;
     color: #e91515;}
 
+.button-container {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    transition: left 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.button:hover:before {
+    left: 0;
+}
