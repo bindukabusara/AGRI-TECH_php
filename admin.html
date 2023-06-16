@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+
+    <style>
+        /* Responsive styles */
+        /* Small screens */
+        @media screen and (max-width: 576px) {
+            .navlist ul {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .navlist ul li {
+                margin-bottom: 10px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .field.button-field {
+                text-align: center;
+            }
+
+            .field input,
+            .field button {
+                height: 80%;
+                width: 30%;
+                border: rgb(0, 0, 0);
+                font-size: 20px;
+                font-weight: 500px;
+                border-radius: 10px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        /* Medium screens */
+        @media screen and (min-width: 577px) and (max-width: 992px) {
+            .navlist ul {
+                justify-content: center;
+            }
+        }
+
+        /* Large screens */
+        @media screen and (min-width: 993px) {
+            .navlist ul {
+                justify-content: flex-end;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navlist">
+        <div class="sub">
+            <ul>
+                <li>
+                    <h1>Agri<span>Trans</span></h1>
+                </li>
+                <li><a href="home.php"><b>Home</b></a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container">
+        <br>
+        <hr>
+        <br><br><br><br><br>
+        <h1>
+            <center>ADMIN</center>
+        </h1>
+        <p></p><br>
+        <br>
+
+        <!--button-->
+        <div class="field button-field">
+            <center>
+                <form>
+                    <div class="button-container">
+                        <button class="button" type="submit"><a href="infoFarmer.php"><strong style="color: #fff;">FARMER</strong></a></button>
+                        <button class="button" type="submit"><a href="infoOrder.php"><strong style="color: #fff;">ORDER</strong></a></button>
+                    </div>
+
+
+                </form>
+            </center>
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>

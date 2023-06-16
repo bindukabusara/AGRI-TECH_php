@@ -121,3 +121,6 @@ button:hover{
     content: " *";
     color: red;
 }
+a {
+    text-decoration: none;
+}
