@@ -16,9 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error inserting data: " . $connection->error;
     }
+    exit; // Terminate the script execution after handling the data insertion
 }
 $connection->close();
 ?>
+
 
 
 <!DOCTYPE html>
@@ -94,9 +96,7 @@ $connection->close();
                 <h2>Farmer Page</h2><br>
                 <p id="welcomeMessage"></p><br>
 
-                <form id="requestForm" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-
-
+                <form id="requestForm">
                     <div class="field input-field">
                         <label for="product">Product<span class="required"></span></label>
                         <select class="selectProduct" id="product" name="product" required>
@@ -139,24 +139,47 @@ $connection->close();
             const welcomeMessage = document.getElementById('welcomeMessage');
             welcomeMessage.textContent = `Hey, ${name}! We can help you sell your product. Please specify the product you want to sell.`;
 
-            // Get the form elements
+            // Get the form element
             const requestForm = document.getElementById('requestForm');
-            const productSelect = document.getElementById('product');
-            const quantityInput = document.getElementById('quantity');
-            const costInput = document.getElementById('totalCost');
 
             // Add submit event listener to the requestForm
             requestForm.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent form submission
 
-                // Get the selected product, quantity, and cost
-                const product = productSelect.value;
-                const quantity = quantityInput.value;
-                const cost = costInput.value;
+                // Get the form data
+                const product = document.getElementById('product').value;
+                const quantity = document.getElementById('quantity').value;
+                const cost = document.getElementById('totalCost').value;
 
-                // Redirect to the Info Page with query parameters
-                const redirectURL = `info.html?name=${name}&product=${product}&quantity=${quantity}&cost=${cost}`;
-                window.location.href = redirectURL;
+                // Create the data object to be sent
+                const data = {
+                    product: product,
+                    quantity: quantity,
+                    cost: cost
+                };
+
+                // Create and configure the XMLHttpRequest object
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '<?php echo $_SERVER['PHP_SELF']; ?>', true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                // Define the callback function when the request completes
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        console.log(xhr.responseText); // Log the response from the server
+                        // Redirect to the Info Page with query parameters
+                        const redirectURL = `info.html?name=${name}&product=${product}&quantity=${quantity}&cost=${cost}`;
+                        window.location.href = redirectURL;
+                    } else {
+                        console.error('Error inserting data:', xhr.status);
+                    }
+                };
+
+                // Convert the data object to a URL-encoded string
+                const encodedData = Object.keys(data).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join('&');
+
+                // Send the AJAX request
+                xhr.send(encodedData);
             });
         };
     </script>
