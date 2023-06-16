@@ -1,3 +1,26 @@
+<?php
+include 'connection.php'; // Include the database connection file
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $product = $_POST['product'];
+    $quantity = $_POST['quantity'];
+    $cost = $_POST['UnitCost'];
+
+    // Create the SQL INSERT query
+    $sql = "INSERT INTO farmer (product, quantity, cost) VALUES ('$product', '$quantity', '$cost')";
+
+    if ($connection->query($sql) === TRUE) {
+        echo "Data inserted successfully";
+    } else {
+        echo "Error inserting data: " . $connection->error;
+    }
+}
+$connection->close();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +94,8 @@
                 <h2>Farmer Page</h2><br>
                 <p id="welcomeMessage"></p><br>
 
-                <form id="requestForm" action="info.html">
+                <form id="requestForm" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
 
                     <div class="field input-field">
                         <label for="product">Product<span class="required"></span></label>
@@ -87,14 +111,12 @@
 
                     <div class="field input-field">
                         <label for="quantity">Quantity (KG)<span class="required"></span></label>
-                        <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity"
-                            name="quantity">
+                        <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
                     </div>
 
                     <div class="field input-field">
                         <label>Cost per Kg (SHS)<span class="required"></span></label>
-                        <input type="number" placeholder="How much do you want to sell per Kg?" class="input"
-                            id="totalCost" name="UnitCost" required>
+                        <input type="number" placeholder="How much do you want to sell per Kg?" class="input" id="totalCost" name="UnitCost" required>
                     </div><br><br><br>
 
                     <div class="field button-field">
@@ -108,7 +130,7 @@
 
     <!-- JavaScript -->
     <script>
-        window.onload = function () {
+        window.onload = function() {
             // Get the name from the URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             const name = urlParams.get('name');
@@ -124,7 +146,7 @@
             const costInput = document.getElementById('totalCost');
 
             // Add submit event listener to the requestForm
-            requestForm.addEventListener('submit', function (event) {
+            requestForm.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent form submission
 
                 // Get the selected product, quantity, and cost
