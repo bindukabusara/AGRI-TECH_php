@@ -63,6 +63,35 @@
                 justify-content: flex-end;
             }
         }
+
+
+        /* ... Your existing CSS code ... */
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e6e6e6;
+        }
+    </style>
     </style>
 
 </head>
@@ -82,9 +111,9 @@
     </nav><BR><br>
 
     <h1></h1>
-    <P> A center of excellence in the heart of Africa</P> <br>
+    <P></P> <br><br><br>
     <center>
-        <h2>DATABASE INFORMATION</h2>
+        <h2>FARMER DATABASE TRACKING (admin view)</h2>
     </center>
     </div><BR>
     <center>
