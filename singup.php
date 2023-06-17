@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
         echo "Contact: $contact<br>";
         echo "Role: $role";
         if ($role === 'farmer') {
-            header("Location: farmer.html?name=$name");
+            header("Location: farmer.php?name=$name");
             exit();
         } elseif ($role === 'whole seller') {
             header("Location: order.html");
