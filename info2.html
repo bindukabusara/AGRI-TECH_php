@@ -69,7 +69,7 @@
         <div class="form login">
             <div class="form-content">
                 <h2>DETAILS ABOUT YOUR ORDER</h2>
-                <p id="welcomeMessage"></p>
+                <p id="greetingMessage"></p>
 
                 <div id="productDetails"></div>
 
@@ -90,14 +90,15 @@
             // Get the query parameters from the URL
             const urlParams = new URLSearchParams(window.location.search);
              const name = urlParams.get('name');
+
             const product = urlParams.get('product');
             const quantity = urlParams.get('quantity');
             const totalCost = urlParams.get('totalCost');
 
             console.log(totalCost)
             // Update the welcome message
-            const productDetails = document.getElementById('productDetails');
-            productDetails.innerHTML = `Hey${name}! you ordered ${quantity} KG of ${product} at a total cost of ${totalCost} SHS`;
+            const greetingMessage = document.getElementById('greetingMessage');
+            greetingMessage.innerHTML = `Hey${name}! you ordered ${quantity} KG of ${product} at a total cost of ${totalCost} SHS`;
 
         };
     </script>

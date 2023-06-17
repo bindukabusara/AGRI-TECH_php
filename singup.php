@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
             header("Location: farmer.php?name=$name");
             exit();
         } elseif ($role === 'whole seller') {
-            header("Location: order.html");
+            header("Location: order.php?name=$name");
             exit();
         }
     } else {

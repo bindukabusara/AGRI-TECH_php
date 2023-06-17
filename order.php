@@ -79,9 +79,10 @@
             <div class="form-content">
 
                 <h2>Order</h2><br>
-                <p>Hey, Do you want to order for grains (beans, Rice,Wheat,...) and get them delivered to yout market?</p><br>
+                <p id="greetingMessage"></p><br>
 
-                <form id="requestForm" action="info2.html">
+                <form id="requestForm" action="info2.html" onsubmit="constructURL(event)">
+
 
                     <div class="field input-field">
                         <label for="product">Product<span class="required"></span></label>
@@ -120,11 +121,21 @@
 
     <!-- Javascript -->
 
+    <!-- JavaScript -->
     <script>
-        // Get references to the input fields
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+
+        // Get references to the elements
+        const greetingMessage = document.getElementById('greetingMessage');
         const productSelect = document.getElementById('product');
         const quantityInput = document.getElementById('quantity');
         const totalCostInput = document.getElementById('totalCost');
+
+        // Update the greeting message with the name
+        const welcomeMessage = document.getElementById('greetingMessage');
+        greetingMessage.textContent = `Hey ${name}, do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?`;
 
         // Add an event listener to detect changes in the inputs
         productSelect.addEventListener('change', updateTotalCost);
@@ -157,6 +168,7 @@
             totalCostInput.value = isNaN(totalCost) ? '' : totalCost.toFixed(2);
         }
     </script>
+
 
 </body>
 

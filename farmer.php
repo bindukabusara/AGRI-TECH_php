@@ -150,6 +150,7 @@ $connection->close();
                 event.preventDefault(); // Prevent form submission
 
                 // Get the form data
+                const name = document.getElementById('name').value;
                 const product = document.getElementById('product').value;
                 const quantity = document.getElementById('quantity').value;
                 const cost = document.getElementById('cost').value;
