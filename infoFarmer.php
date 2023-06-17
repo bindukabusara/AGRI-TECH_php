@@ -92,6 +92,7 @@
             <thead>
                 <tr>
                     <th rowspan="2">ID</th>
+                    <th>Name</th>
                     <th>PRODUCT</th>
                     <th>QUANTITY (KG)</th>
                     <th colspan="2">COST PER KG (SHS)</th>
@@ -99,13 +100,38 @@
             </thead>
             <tbody>
                 <?php
+                include 'connection.php'; // Include the database connection file
+
+                // Fetch data from the farmer table
+                $sql = "SELECT * FROM farmer";
+                $result = $connection->query($sql);
+
+                // Check if there are any rows returned
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Retrieve data for each row
+                        $ID = $row['ID'];
+                        $name = $row['name'];
+                        $product = $row['product'];
+                        $quantity = $row['quantity'];
+                        $cost = $row['cost'];
+
+                        // Display the data in the table
+                        echo "<tr>
+                <td>$ID</td>
+                <td>$name</td>
+                <td>$product</td>
+                <td>$quantity</td>
+                <td>$cost</td>
+              </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>No data found</td></tr>";
+                }
+
+                $connection->close();
                 ?>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
 
             </tbody>
         </table>
