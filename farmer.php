@@ -4,12 +4,14 @@ include 'connection.php'; // Include the database connection file
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
+    $name = $_POST['name']; // New line: Get the name from the form
+
     $product = $_POST['product'];
     $quantity = $_POST['quantity'];
-    $cost = $_POST['UnitCost'];
+    $cost = $_POST['cost'];
 
     // Create the SQL INSERT query
-    $sql = "INSERT INTO farmer (product, quantity, cost) VALUES ('$product', '$quantity', '$cost')";
+    $sql = "INSERT INTO farmer (name, product, quantity, cost) VALUES ('$name', '$product', '$quantity', '$cost')"; // New line: Include the name in the query
 
     if ($connection->query($sql) === TRUE) {
         echo "Data inserted successfully";
@@ -20,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 $connection->close();
 ?>
+
 
 
 
@@ -116,7 +119,7 @@ $connection->close();
 
                     <div class="field input-field">
                         <label>Cost per Kg (SHS)<span class="required"></span></label>
-                        <input type="number" placeholder="How much do you want to sell per Kg?" class="input" id="totalCost" name="UnitCost" required>
+                        <input type="number" placeholder="How much do you want to sell per Kg?" class="input" id="cost" name="cost" required>
                     </div><br><br><br>
 
                     <div class="field button-field">
@@ -149,10 +152,11 @@ $connection->close();
                 // Get the form data
                 const product = document.getElementById('product').value;
                 const quantity = document.getElementById('quantity').value;
-                const cost = document.getElementById('totalCost').value;
+                const cost = document.getElementById('cost').value;
 
                 // Create the data object to be sent
                 const data = {
+                    name: name, // New line: Include the name in the data object
                     product: product,
                     quantity: quantity,
                     cost: cost
