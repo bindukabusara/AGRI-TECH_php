@@ -9,11 +9,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $product = $_POST['product'];
     $quantity = $_POST['quantity'];
     $cost = $_POST['cost'];
-
-    $contact = $_POST['contact']; // Get the contact from the form
+    $contact = $_POST['contact'];
 
     // Create the SQL INSERT query
-    $sql = "INSERT INTO farmer (name, product, quantity, cost, contact) VALUES ('$name', '$product', '$quantity', '$cost', '$contact')"; // Include the contact in the quer
+    $sql = "INSERT INTO farmer (name, product, quantity, cost, contact) VALUES ('$name', '$product', '$quantity', '$cost','$contact')"; // New line: Include the name in the query
 
     if ($connection->query($sql) === TRUE) {
         echo "Data inserted successfully";
@@ -139,6 +138,7 @@ $connection->close();
             // Get the name from the URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             const name = urlParams.get('name');
+            const contact = urlParams.get('contact');
 
             // Update the welcome message
             const welcomeMessage = document.getElementById('welcomeMessage');
@@ -155,7 +155,6 @@ $connection->close();
                 const product = document.getElementById('product').value;
                 const quantity = document.getElementById('quantity').value;
                 const cost = document.getElementById('cost').value;
-                const contact = document.getElementById('contact').value;
 
                 // Create the data object to be sent
                 const data = {
