@@ -10,8 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $quantity = $_POST['quantity'];
     $cost = $_POST['cost'];
 
+    $contact = $_POST['contact']; // Get the contact from the form
+
     // Create the SQL INSERT query
-    $sql = "INSERT INTO farmer (name, product, quantity, cost) VALUES ('$name', '$product', '$quantity', '$cost')"; // New line: Include the name in the query
+    $sql = "INSERT INTO farmer (name, product, quantity, cost, contact) VALUES ('$name', '$product', '$quantity', '$cost', '$contact')"; // Include the contact in the quer
 
     if ($connection->query($sql) === TRUE) {
         echo "Data inserted successfully";
@@ -150,17 +152,18 @@ $connection->close();
                 event.preventDefault(); // Prevent form submission
 
                 // Get the form data
-                const name = document.getElementById('name').value;
                 const product = document.getElementById('product').value;
                 const quantity = document.getElementById('quantity').value;
                 const cost = document.getElementById('cost').value;
+                const contact = document.getElementById('contact').value;
 
                 // Create the data object to be sent
                 const data = {
                     name: name, // New line: Include the name in the data object
                     product: product,
                     quantity: quantity,
-                    cost: cost
+                    cost: cost,
+                    contact: contact
                 };
 
                 // Create and configure the XMLHttpRequest object
