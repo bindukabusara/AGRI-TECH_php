@@ -9,36 +9,28 @@ if (isset($_POST['submit'])) {
     $userSql = "INSERT INTO users (name, contact, role)
     VALUES ('$name', '$contact', '$role')";
 
-    $redirectURL = "farmer.php?name=" . urlencode($name) . "&contact=" . urlencode($contact);
-    header("Location: $redirectURL");
-    exit;
-
-
     $result = mysqli_query($connection, $userSql);
     if ($result) {
-        $result = mysqli_query($connection, $userSql);
-        if ($result) {
-            echo "Data inserted successfully:<br>";
-            echo "Name: $name<br>";
-            echo "Contact: $contact<br>";
-            echo "Role: $role";
+        echo "Data inserted successfully:<br>";
+        echo "Name: $name<br>";
+        echo "Contact: $contact<br>";
+        echo "Role: $role";
 
-            if ($role === 'farmer') {
-                header("Location: farmer.php?name=$name");
-                exit();
-            } elseif ($role === 'whole seller') {
-                header("Location: order.php?name=$name");
-                exit();
-            }
-        } else {
-            die(mysqli_error($connection));
+        if ($role === 'farmer') {
+            $redirectURL = "farmer.php?name=" . urlencode($name) . "&contact=" . urlencode($contact);
+            header("Location: $redirectURL");
+            exit();
+        } elseif ($role === 'whole seller') {
+            $redirectURL = "order.php?name=" . urlencode($name) . "&contact=" . urlencode($contact);
+            header("Location: $redirectURL");
+            exit();
         }
     } else {
         die(mysqli_error($connection));
     }
 }
-
 ?>
+
 
 
 <!DOCTYPE html>
