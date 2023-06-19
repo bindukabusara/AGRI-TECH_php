@@ -6,27 +6,37 @@ if (isset($_POST['submit'])) {
     $contact = $_POST['contact'];
     $role = $_POST['role'];
 
-    $sql = "INSERT INTO `users` (name, contact, role)
+    $userSql = "INSERT INTO users (name, contact, role)
     VALUES ('$name', '$contact', '$role')";
 
-    $result = mysqli_query($connection, $sql);
+    $farmerSql = "INSERT INTO farmer (name, contact)
+    VALUES ('name','$contact')";
+
+    $result = mysqli_query($connection, $userSql);
     if ($result) {
-        echo "Data inserted successfully:<br>";
-        echo "Name: $name<br>";
-        echo "Contact: $contact<br>";
-        echo "Role: $role";
-        if ($role === 'farmer') {
-            header("Location: farmer.php?name=$name");
-            exit();
-        } elseif ($role === 'whole seller') {
-            header("Location: order.php?name=$name");
-            exit();
+        $resultFarmer = mysqli_query($connection, $farmerSql);
+        if ($resultFarmer) {
+            echo "Data inserted successfully:<br>";
+            echo "Name: $name<br>";
+            echo "Contact: $contact<br>";
+            echo "Role: $role";
+
+            if ($role === 'farmer') {
+                header("Location: farmer.php?name=$name");
+                exit();
+            } elseif ($role === 'whole seller') {
+                header("Location: order.php?name=$name");
+                exit();
+            }
+        } else {
+            die(mysqli_error($connection));
         }
     } else {
         die(mysqli_error($connection));
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
