@@ -124,7 +124,8 @@
                     <th>Name</th>
                     <th>PRODUCT</th>
                     <th>QUANTITY (KG)</th>
-                    <th colspan="2">COST PER KG (SHS)</th>
+                    <th>COST PER KG (SHS)</th>
+                    <th colspan="2">Phone Number</th>
                 </tr>
             </thead>
             <tbody>
@@ -144,6 +145,7 @@
                         $product = $row['product'];
                         $quantity = $row['quantity'];
                         $cost = $row['cost'];
+                        $contact = $row['contact'];
 
                         // Display the data in the table
                         echo "<tr>
@@ -152,6 +154,7 @@
                 <td>$product</td>
                 <td>$quantity</td>
                 <td>$cost</td>
+                <td>$contact</td>
               </tr>";
                     }
                 } else {
