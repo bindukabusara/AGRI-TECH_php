@@ -9,13 +9,15 @@ if (isset($_POST['submit'])) {
     $userSql = "INSERT INTO users (name, contact, role)
     VALUES ('$name', '$contact', '$role')";
 
-    $farmerSql = "INSERT INTO farmer (name, contact)
-    VALUES ('name','$contact')";
+    $redirectURL = "farmer.php?name=" . urlencode($name) . "&contact=" . urlencode($contact);
+    header("Location: $redirectURL");
+    exit;
+
 
     $result = mysqli_query($connection, $userSql);
     if ($result) {
-        $resultFarmer = mysqli_query($connection, $farmerSql);
-        if ($resultFarmer) {
+        $result = mysqli_query($connection, $userSql);
+        if ($result) {
             echo "Data inserted successfully:<br>";
             echo "Name: $name<br>";
             echo "Contact: $contact<br>";
@@ -35,6 +37,7 @@ if (isset($_POST['submit'])) {
         die(mysqli_error($connection));
     }
 }
+
 ?>
 
 
