@@ -17,11 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($role === 'farmer') {
             // Redirect to farmer page
-            header("Location: farmer.html?name=" . $user['name']);
+            header("Location: farmer.php?name=" . $user['name']);
             exit();
         } elseif ($role === 'whole seller') {
             // Redirect to order page for whole seller
-            header("Location: order.html");
+            header("Location: order.php");
             exit();
         }
     } else {
