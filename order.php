@@ -1,3 +1,29 @@
+<?php
+include 'connection.php'; // Include the database connection file
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get the form data
+    $name = $_POST['name']; // New line: Get the name from the form
+
+    $product = $_POST['product'];
+    $quantity = $_POST['quantity'];
+    $totalCost = $_POST['totalCost'];
+    $contact = $_POST['contact'];
+
+    // Create the SQL INSERT query
+    $sql = "INSERT INTO order (name, product, quantity, totalCost, contact) VALUES ('$name', '$product', '$quantity', '$totalCost','$contact')"; // New line: Include the name in the query
+
+    if ($connection->query($sql) === TRUE) {
+        echo "Data inserted successfully";
+    } else {
+        echo "Error inserting data: " . $connection->error;
+    }
+    exit; // Terminate the script execution after handling the data insertion
+}
+$connection->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,52 +148,8 @@
     <!-- Javascript -->
 
     <!-- JavaScript -->
-    <script>
-        // Get the URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const name = urlParams.get('name');
 
-        // Get references to the elements
-        const greetingMessage = document.getElementById('greetingMessage');
-        const productSelect = document.getElementById('product');
-        const quantityInput = document.getElementById('quantity');
-        const totalCostInput = document.getElementById('totalCost');
 
-        // Update the greeting message with the name
-        const welcomeMessage = document.getElementById('greetingMessage');
-        greetingMessage.textContent = `Hey ${name}, do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?`;
-
-        // Add an event listener to detect changes in the inputs
-        productSelect.addEventListener('change', updateTotalCost);
-        quantityInput.addEventListener('input', updateTotalCost);
-
-        function updateTotalCost() {
-            // Get the selected product and quantity entered by the user
-            const selectedProduct = productSelect.value;
-            const quantity = parseFloat(quantityInput.value);
-
-            // Define the unit cost based on the selected product in shillings
-            let unitCost;
-            if (selectedProduct === 'beans') {
-                unitCost = 3500; // Sample unit cost for beans in shillings
-            } else if (selectedProduct === 'rice') {
-                unitCost = 4000; // Sample unit cost for rice in shillings
-            } else if (selectedProduct === 'wheat') {
-                unitCost = 3800; // Sample unit cost for wheat in shillings
-            } else if (selectedProduct === 'maize') {
-                unitCost = 2000; // Sample unit cost for wheat in shillings
-            } else if (selectedProduct === 'peas') {
-                unitCost = 2500; // Sample unit cost for wheat in shillings
-            } else {
-                unitCost = 0; // If no product is selected, set the unit cost to 0
-            }
-
-            // Perform the multiplication and update the total cost field
-            const totalCost = unitCost * quantity;
-
-            totalCostInput.value = isNaN(totalCost) ? '' : totalCost.toFixed(2);
-        }
-    </script>
 
 
 </body>
