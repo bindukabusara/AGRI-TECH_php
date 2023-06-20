@@ -96,8 +96,8 @@
             <center>
                 <form>
                     <div class="button-container">
-                        <button class="button" type="submit"><a href="log.php"><strong style="color: #fff;">LOG IN</strong></a></button>
-                        <button class="button" type="submit"><a href="singup.php"><strong style="color: #fff;">SIGN UP</strong></a></button>
+                        <button class="button" type="submit"><a href="log.php"><strong style="color: #000;">LOG IN</strong></a></button>
+                        <button class="button" type="submit"><a href="singup.php"><strong style="color: #000;">SIGN UP</strong></a></button>
                     </div>
 
 
