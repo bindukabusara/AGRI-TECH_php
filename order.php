@@ -2,6 +2,7 @@
 include 'connection.php'; // Include the database connection file
 
 // Check if the form is submitted
+// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
     $name = $_POST['name'];
