@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME PAGE</title>
+    <title>ADMIN PAGE FOR ORDER PAGE</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="home.css">
@@ -132,8 +132,8 @@
                 <?php
                 include 'connection.php'; // Include the database connection file
 
-                // Fetch data from the farmer table
-                $sql = "SELECT * FROM order";
+                // Fetch data from the `order` table
+                $sql = "SELECT * FROM `order`"; // Enclose table name in backticks
                 $result = $connection->query($sql);
 
                 // Check if there are any rows returned
@@ -149,13 +149,13 @@
 
                         // Display the data in the table
                         echo "<tr>
-                <td>$ID</td>
-                <td>$name</td>
-                <td>$product</td>
-                <td>$quantity</td>
-                <td>$totalCost</td>
-                <td>$contact</td>
-              </tr>";
+            <td>$ID</td>
+            <td>$name</td>
+            <td>$product</td>
+            <td>$quantity</td>
+            <td>$totalCost</td>
+            <td>$contact</td>
+          </tr>";
                     }
                 } else {
                     echo "<tr><td colspan='5'>No data found</td></tr>";
