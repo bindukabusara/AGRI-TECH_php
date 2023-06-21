@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:  #cccccc;
+    background-color:  #ffffff;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -112,7 +112,7 @@ span{
     right: 10px;
     transform: translateY(-50%);
     font-size: 16px;
-    color: #8b8b8b;
+    color: #ffffff;
     cursor: pointer;
     padding: 5px;
 
