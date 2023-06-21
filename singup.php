@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
         <div class="form login">
             <div class="form-content">
                 <h2>
-                    <pre>Agri<span>Trans</span>  Sign Up</pre>
+                    <pre>Sign Up</pre>
                 </h2><br>
                 <p>Hey, Enter your details</p>
                 <form method="post" id="userForm" onsubmit="redirectToPage(event)">

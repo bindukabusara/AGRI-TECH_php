@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="form login">
             <div class="form-content">
                 <h2>
-                    <pre>Agri<span>Trans</span>  Log in</pre>
+                    <pre>Log in</pre>
                 </h2><br>
                 <p>Hey, Welcome back! Please enter the phone number that you used to create your account</p>
 
