@@ -21,6 +21,9 @@ p {
     color: #000000;
     text-align: center;
 }
+strong{
+ font-weight: bold;
+}
 /* Google Fonts - Poppins */
 
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
@@ -123,8 +126,6 @@ span {
 button {
     color: rgb(255, 255, 255);
     background-color: #ffffff;
-
-
 }
 
 button:hover {

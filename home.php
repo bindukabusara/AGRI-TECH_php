@@ -58,10 +58,11 @@
         }
 
         /* Large screens */
-        @media screen and (min-width: 993px) {
+        @media screen and (min-width: 893px) {
             .navlist ul {
                 justify-content: flex-end;
             }
+
         }
     </style>
 
@@ -74,7 +75,7 @@
                 <li>
                     <h1>Agri<span>Trans</span></h1>
                 </li>
-                <li><a href="home.php"><b>Home</b></a></li>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">About Us</a></li>
             </ul>
@@ -87,7 +88,7 @@
         <h1>
             <center>Trade food easily</center>
         </h1>
-        <p><strong>AgriTrans</strong>: Connecting farmers and market vendors <br>for efficient food sales and purchases.</p><br>
+        <p><strong>AgriTrans</strong>: Connecting farmers and market vendors <br>for easy food sales and purchases.</p><br>
         <br>
 
         <!--button-->
