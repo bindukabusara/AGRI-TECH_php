@@ -142,8 +142,8 @@ $connection->close();
 
             // Update the welcome message
             const welcomeMessage = document.getElementById('welcomeMessage');
-            welcomeMessage.textContent = `Hey, ${name}! We can help you sell your product. Please specify the product you want to sell.`;
-
+            welcomeMessage.textContent = `Hello ${name}! We can help you sell your product. Please specify the product you want to sell.`;
+            welcomeMessage.textContent = `Hello ${name}! We can help you sell your product. Please specify the product you want to sell.`;
             // Get the form element
             const requestForm = document.getElementById('requestForm');
 
