@@ -22,9 +22,10 @@
 }
 
 .form {
+    margin-top: -5%;
     position: absolute;
     max-width: 600px;
-    width: 100%;
+    width: 80%;
     padding: 30px;
     border-radius: 10px;
     background:#ffffff;
@@ -64,7 +65,7 @@ p {
     font-size: 16px;
     font-weight: 300;
     color: #2f2f2f;
-    text-align: center;
+    text-align: left;
 }
 
 form {

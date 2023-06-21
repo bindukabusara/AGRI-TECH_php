@@ -86,7 +86,7 @@ $connection->close();
                 <li>
                     <h1>Agri<span>Trans</span></h1>
                 </li>
-                <li><a href="home.php"><b>Home</b></a></li>
+                <li><a href="home.php">Home</a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">About Us</a></li>
             </ul>
@@ -98,7 +98,8 @@ $connection->close();
         <div class="form login">
             <div class="form-content">
                 <h2>Farmer Page</h2><br>
-                <p id="welcomeMessage"></p><br>
+                <p id="welcomeMessage"></p>
+                <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
 
                 <form id="requestForm">
                     <div class="field input-field">
@@ -142,8 +143,8 @@ $connection->close();
 
             // Update the welcome message
             const welcomeMessage = document.getElementById('welcomeMessage');
-            welcomeMessage.textContent = `Hello ${name}! We can help you sell your product. Please specify the product you want to sell.`;
-            welcomeMessage.textContent = `Hello ${name}! We can help you sell your product. Please specify the product you want to sell.`;
+            welcomeMessage.textContent = `Hello ${name},`;
+
             // Get the form element
             const requestForm = document.getElementById('requestForm');
 
