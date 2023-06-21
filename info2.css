@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Bree Serif', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navlist {
@@ -23,7 +23,7 @@
 }
 
 .nav ul a {
-    font-family: 'Bree Serif', serif;
+    font-family: 'Roboto', sans-serif;
     color: #fff;
 
 }
@@ -44,7 +44,7 @@ span {
 .navlist ul a {
     margin-left: 20px;
     font-size: 50px;
-    font-family: 'Bree Serif', serif;
+    font-family: 'Roboto', sans-serif;
     font-size: large;
     color: #fff;
     margin: 10px;
@@ -72,7 +72,7 @@ span {
 }
 
 .container h1 {
-    font-family: 'Bree Serif', serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;
     word-spacing: 10px;
     padding:10px;

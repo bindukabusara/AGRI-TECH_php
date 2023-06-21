@@ -18,7 +18,7 @@
 }
 
 .container h1 {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 20px;
     word-spacing: 5px;
     font-size: 45px;
@@ -36,7 +36,7 @@
     border: 1px solid rgb(239, 17, 58);
     border-radius: 100px;
     font-size: large;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Roboto', sans-serif;
     border-bottom: #ff0000c3;
     border: rebeccapurple;
 }
@@ -51,7 +51,7 @@
     background: rgb(255, 255, 255);
     border: 3px solid rgb(239, 17, 58);
     font-size: large;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Roboto', sans-serif;
     position: relative;
     right: 550px;
 }
@@ -127,7 +127,7 @@ span {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "century gothic", sans-serif;
+    font-family: 'Roboto', sans-serif;
     transition: 0.6s;
 }
 
