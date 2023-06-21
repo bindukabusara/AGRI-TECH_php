@@ -97,9 +97,9 @@ $connection->close();
         <h1>Agri<span>Trans</span></h1>
         <div class="form login">
             <div class="form-content">
-                <h2>Farmer Page</h2><br>
-                <p id="welcomeMessage"></p>
+                <h4 id="welcomeMessage"></h4><br>
                 <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                <h4>Submit food for sale</h4>
 
                 <form id="requestForm">
                     <div class="field input-field">
