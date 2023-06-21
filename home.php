@@ -83,12 +83,11 @@
 
     <section class="container">
         <br>
-        <hr>
         <br><br><br><br><br>
         <h1>
             <center>Trade food easily</center>
         </h1>
-        <p>AgriTrans: Connecting farmers and market vendors <br>for efficient food sales and purchases.</p><br>
+        <p><strong>AgriTrans</strong>: Connecting farmers and market vendors <br>for efficient food sales and purchases.</p><br>
         <br>
 
         <!--button-->
