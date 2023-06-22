@@ -40,12 +40,13 @@ strong{
     background: #2E6140;
     position: fixed;
     padding: 5px 5px;
-    margin-top: 2%;
+    margin-top: 0%;
 
 }
 
 .nav {
     background-color: #fff;
+    margin-top: 2%;
 
 }
 
@@ -59,6 +60,7 @@ strong{
 .navlist ul {
     display: flex;
     list-style: none;
+    margin-top: 2%;
 }
 
 .navlist ul li:first-child {

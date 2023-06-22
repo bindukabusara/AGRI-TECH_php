@@ -110,8 +110,8 @@
         </div>
     </nav><BR><br>
 
-    <h1></h1>
-    <P></P> <br><br><br>
+
+    <br><br><br><br><br><br>
     <center>
         <h2>FARMER DATABASE TRACKING (admin view)</h2>
     </center>

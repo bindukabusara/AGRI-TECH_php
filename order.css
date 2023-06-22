@@ -9,20 +9,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.container.forms {
-    display: flex;
-    flex-direction: row;
-}
-
-.hello-text {
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-.form-content {
-    flex: 1;
-}
-
 .container {
     height: 100vh;
     width: 100%;
@@ -36,7 +22,7 @@
 }
 
 .form {
-    margin-top: -5%;
+    margin-top: -10%;
     position: absolute;
     max-width: 600px;
     width: 80%;
