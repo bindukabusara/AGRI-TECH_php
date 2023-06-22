@@ -73,7 +73,7 @@
         <div class="sub">
             <ul>
                 <li>
-                    <h1><img scr="logoa.png" alt="logo"></h1>
+                    <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="">Service</a></li>
