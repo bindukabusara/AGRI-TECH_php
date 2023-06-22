@@ -94,7 +94,7 @@ $connection->close();
     </nav>
 
     <section class="container forms">
-        <h1>Agri<span>Trans</span></h1>
+        <img src="logoa.png" alt="logo" width="100px" length="100px">
         <div class="form login">
             <div class="form-content">
                 <h4 id="welcomeMessage"></h4><br>
