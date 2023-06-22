@@ -84,7 +84,7 @@ $connection->close();
         <div class="sub">
             <ul>
                 <li>
-                    <h1>Agri<span>Trans</span></h1>
+                    <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="">Service</a></li>
@@ -94,7 +94,7 @@ $connection->close();
     </nav>
 
     <section class="container forms">
-        <img src="logoa.png" alt="logo" width="100px" length="100px">
+        <h1>Agri<span>Trans</span></h1>
         <div class="form login">
             <div class="form-content">
                 <h4 id="welcomeMessage"></h4><br>
