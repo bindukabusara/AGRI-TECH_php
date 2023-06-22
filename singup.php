@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
         <div class="sub">
             <ul>
                 <li>
-                    <h1>Agri<span>Trans</span></h1>
+                    <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
                 <li><a href="home.php"><b>Home</b></a></li>
                 <li><a href="">Service</a></li>
