@@ -73,7 +73,7 @@
         <div class="sub">
             <ul>
                 <li>
-                    <h1>Agri<span>Trans</span></h1>
+                    <h1><img scr="logoa.png" alt="logo"></h1>
                 </li>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="">Service</a></li>
