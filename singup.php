@@ -3,16 +3,18 @@ include 'connection.php';
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
+    $lname = $_POST['lname'];
     $contact = $_POST['contact'];
     $role = $_POST['role'];
 
-    $userSql = "INSERT INTO users (name, contact, role)
-    VALUES ('$name', '$contact', '$role')";
+    $userSql = "INSERT INTO users (name, lname, contact, role)
+    VALUES ('$name','$lname', '$contact', '$role')";
 
     $result = mysqli_query($connection, $userSql);
     if ($result) {
         echo "Data inserted successfully:<br>";
         echo "Name: $name<br>";
+        echo "lName: $lname<br>";
         echo "Contact: $contact<br>";
         echo "Role: $role";
 
@@ -104,8 +106,12 @@ if (isset($_POST['submit'])) {
                 <p>Hey, Enter your details</p>
                 <form method="post" id="userForm" onsubmit="redirectToPage(event)">
                     <div class="field input-field">
-                        <label for="name">Name<span class="required"></span></label>
-                        <input type="text" placeholder="Name" class="input" id="name" name="name" required>
+                        <label for="name">First Name<span class="required"></span></label>
+                        <input type="text" placeholder="Fisrt Name" class="input" id="name" name="name" required>
+                    </div>
+                    <div class="field input-field">
+                        <label for="lname">Last Name<span class="required"></span></label>
+                        <input type="text" placeholder="Last Name" class="input" id="lname" name="lname" required>
                     </div>
                     <div class="field input-field">
                         <label for="contact">Phone Number<span class="required"></span></label>
