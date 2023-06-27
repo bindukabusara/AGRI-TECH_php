@@ -109,10 +109,12 @@ if (isset($_POST['submit'])) {
                         <label for="name">First Name<span class="required"></span></label>
                         <input type="text" placeholder="Fisrt Name" class="input" id="name" name="name" required>
                     </div>
+
                     <div class="field input-field">
                         <label for="lname">Last Name<span class="required"></span></label>
                         <input type="text" placeholder="Last Name" class="input" id="lname" name="lname" required>
                     </div>
+
                     <div class="field input-field">
                         <label for="contact">Phone Number<span class="required"></span></label>
                         <input type="number" placeholder="Phone Number" class="input" id="contact" name="contact" required>
