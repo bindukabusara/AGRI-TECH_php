@@ -4,7 +4,8 @@ include 'connection.php'; // Include the database connection file
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
-    $name = $_POST['name']; // New line: Get the name from the form
+    $name = $_POST['name'];
+    $lname = $_POST['lname'];
 
     $product = $_POST['product'];
     $quantity = $_POST['quantity'];
@@ -12,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contact = $_POST['contact'];
 
     // Create the SQL INSERT query
-    $sql = "INSERT INTO farmer (name, product, quantity, cost, contact) VALUES ('$name', '$product', '$quantity', '$cost','$contact')"; // New line: Include the name in the query
+    $sql = "INSERT INTO farmer (name, lname, product, quantity, cost, contact) VALUES ('$name','$lname', '$product', '$quantity', '$cost','$contact')"; // New line: Include the name in the query
 
     if ($connection->query($sql) === TRUE) {
         echo "Data inserted successfully";
@@ -139,6 +140,7 @@ $connection->close();
             // Get the name from the URL parameters
             const urlParams = new URLSearchParams(window.location.search);
             const name = urlParams.get('name');
+            const lname = urlParams.get('lname');
             const contact = urlParams.get('contact');
 
             // Update the welcome message
@@ -160,6 +162,7 @@ $connection->close();
                 // Create the data object to be sent
                 const data = {
                     name: name, // New line: Include the name in the data object
+                    lname: lname,
                     product: product,
                     quantity: quantity,
                     cost: cost,
