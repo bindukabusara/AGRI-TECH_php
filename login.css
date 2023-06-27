@@ -20,12 +20,12 @@
 }
 .form {
     position: absolute;
-    max-width: 430px;
+    max-width: 480px;
     width: 100%;
-
     padding: 30px;
     border-radius: 10px;
-    background:#fff;
+    background: #fff;
+    margin-top: -10%;
 
 }
 .form.signup{
