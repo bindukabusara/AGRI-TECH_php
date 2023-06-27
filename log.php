@@ -117,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>
                     <pre>Log in</pre>
                 </h2><br>
-                <p>Hey, Welcome back! Please enter the phone number that you used to create your account</p>
+                <p>Hey, Welcome back! Please enter the phone number that you used to create your account</p><br>
 
                 <form method="POST" action="#">
                     <div class="field input-field">
