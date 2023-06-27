@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $connection->close();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,8 +98,9 @@ $connection->close();
         <h1>Agri<span>Trans</span></h1>
         <div class="form login">
             <div class="form-content">
-                <h2>Order</h2><br>
-                <p id="greetingMessage"></p><br>
+                <h4 id="greetingMessage"></h4><br>
+                <p>Do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?</p><br>
+                <h4>Make your order</h4>
                 <form id="requestForm">
                     <div class="field input-field">
                         <label for="product">Product<span class="required"></span></label>
@@ -141,7 +143,7 @@ $connection->close();
         const totalCostInput = document.getElementById('totalCost');
 
         // Update the greeting message with the name
-        greetingMessage.textContent = `Hey ${name}, do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?`;
+        greetingMessage.textContent = `Hello ${name}, `;
 
         // Add an event listener to detect changes in the inputs
         productSelect.addEventListener('change', updateTotalCost);
