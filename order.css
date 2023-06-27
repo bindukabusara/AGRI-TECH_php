@@ -20,7 +20,17 @@
     background-size: cover;
     background-position: center;
 }
-
+#division {
+    display: flex;
+    background-color: #ffffff;
+    align-content: center;
+    justify-content: center;
+}
+#division div{
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+}
 .form {
     margin-top: -10%;
     position: absolute;
