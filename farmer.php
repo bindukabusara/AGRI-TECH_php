@@ -93,7 +93,6 @@ $connection->close();
             </ul>
         </div>
     </nav>
-
     <section class="container forms">
         <h1>Agri<span>Trans</span></h1>
         <div class="form login">
@@ -133,6 +132,8 @@ $connection->close();
             </div>
         </div>
     </section>
+
+    </div>
 
     <!-- JavaScript -->
     <script>
