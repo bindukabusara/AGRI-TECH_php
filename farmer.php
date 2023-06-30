@@ -40,197 +40,233 @@ $connection->close();
     <!-- CSS -->
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="Uganda Christian University.css">
+
+
     <style>
+        /* Common styles for all screen sizes */
+        /* (Add your existing styles here) */
+
         /* Responsive styles */
         /* Small screens */
         @media screen and (max-width: 576px) {
-            .navlist ul {
+            .division {
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
             }
 
-            .navlist ul li {
-                margin-bottom: 2px;
+            .form.login {
+                width: 90%;
+                max-width: 300px;
+                margin-bottom: 10px;
             }
 
-            .container.forms {
-                width: 10%;
-                max-width: 200px;
-                margin: 0 auto;
-                background-color: #fff;
+            .form.login .form-content {
+                margin-bottom: 10px;
             }
+
+            /* (Add more responsive styles as needed) */
         }
 
         /* Medium screens */
         @media screen and (min-width: 577px) and (max-width: 992px) {
-            .navlist ul {
-                justify-content: center;
+            .division {
+                flex-direction: column;
+                align-items: center;
             }
+
+            .form.login {
+                width: 80%;
+                max-width: 400px;
+                margin-bottom: 10px;
+            }
+
+            .form.login .form-content {
+                margin-bottom: 10px;
+            }
+
+            /* (Add more responsive styles as needed) */
         }
 
         /* Large screens */
         @media screen and (min-width: 993px) {
-            .navlist ul {
-                justify-content: flex-end;
+            .division {
+                flex-direction: row;
             }
+
+            .form.login {
+                width: 30%;
+                max-width: 500px;
+                margin-bottom: 0;
+            }
+
+            .form.login .form-content {
+                margin-bottom: 0;
+            }
+
+            /* (Add more responsive styles as needed) */
         }
     </style>
 
 </head>
 
 <body>
+    <!-- ... (rest of the HTML code) ... -->
 
-    <nav class="navlist">
-        <div class="sub">
-            <ul>
-                <li>
-                    <img src="logoa.png" alt="logo" width="100px" length="100px">
-                </li>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">About Us</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div style="display: flex; justify-content: space-between; padding: 2px;">
-        <section class="container forms" style="background-color:#ccc;">
 
-            <div class=" form login" style="background-color:#ccc;">
-                <div class="form-content">
+    </head>
 
-                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                    <h4>step 1</h4>
-                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                    <h4>step 1</h4>
-                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                    <h4>step 1</h4>
-                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                    <h4>step 1</h4>
-                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                    <h4>step 1</h4>
-                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                    <h4>step 1</h4>
+    <body>
 
-                </div>
+        <nav class="navlist">
+            <div class="sub">
+                <ul>
+                    <li>
+                        <img src="logoa.png" alt="logo" width="100px" length="100px">
+                    </li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="">Service</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
             </div>
-        </section>
+        </nav>
+        <div class="division">
+            <section class="container forms" style="background-color:#ccc;">
 
-        <section class="container forms">
+                <div class=" form login" style="background-color:#ccc;">
+                    <div class="form-content">
 
-            <div class="form login">
-                <div class="form-content">
-                    <h3 id="welcomeMessage"></h3><br>
-                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                    <h4>Submit food for sale</h4>
+                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                        <h4>step 1</h4>
+                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                        <h4>step 1</h4>
+                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                        <h4>step 1</h4>
+                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                        <h4>step 1</h4>
+                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                        <h4>step 1</h4>
+                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                        <h4>step 1</h4>
 
-                    <form id="requestForm">
-                        <div class="field input-field">
-                            <label for="product">Product<span class="required"></span></label>
-                            <select class="selectProduct" id="product" name="product" required>
-                                <option value="">-- Please select a product --</option>
-                                <option value="beans">Beans</option>
-                                <option value="rice">Rice</option>
-                                <option value="wheat">Wheat</option>
-                                <option value="maize">Maize</option>
-                                <option value="peas">Peas</option>
-                            </select>
-                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        <div class="field input-field">
-                            <label for="quantity">Quantity (KG)<span class="required"></span></label>
-                            <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
-                        </div>
+            <section class="container forms">
 
-                        <div class="field input-field">
-                            <label>Cost per Kg (SHS)<span class="required"></span></label>
-                            <input type="number" placeholder="How much do you want to sell per Kg?" class="input" id="cost" name="cost" required>
-                        </div><br><br><br>
-                        <center>
-                            <div class="field button-field">
-                                <button type="submit"><strong>Submit Request</strong></button>
+                <div class="form login">
+                    <div class="form-content">
+                        <h3 id="welcomeMessage"></h3><br>
+                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                        <h4>Submit food for sale</h4>
+
+                        <form id="requestForm">
+                            <div class="field input-field">
+                                <label for="product">Product<span class="required"></span></label>
+                                <select class="selectProduct" id="product" name="product" required>
+                                    <option value="">-- Please select a product --</option>
+                                    <option value="beans">Beans</option>
+                                    <option value="rice">Rice</option>
+                                    <option value="wheat">Wheat</option>
+                                    <option value="maize">Maize</option>
+                                    <option value="peas">Peas</option>
+                                </select>
                             </div>
-                        </center><br>
 
-                    </form>
+                            <div class="field input-field">
+                                <label for="quantity">Quantity (KG)<span class="required"></span></label>
+                                <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
+                            </div>
+
+                            <div class="field input-field">
+                                <label>Cost per Kg (SHS)<span class="required"></span></label>
+                                <input type="number" placeholder="How much do you want to sell per Kg?" class="input" id="cost" name="cost" required>
+                            </div><br><br><br>
+                            <center>
+                                <div class="field button-field">
+                                    <button type="submit"><strong>Submit Request</strong></button>
+                                </div>
+                            </center><br>
+
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="container forms">
+            <section class="container forms">
 
-            <div class="form login">
-                <div class="form-content">
+                <div class="form login">
+                    <div class="form-content">
 
 
+                    </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
 
-    </div>
+        </div>
 
-    <!-- JavaScript -->
-    <script>
-        window.onload = function() {
-            // Get the name from the URL parameters
-            const urlParams = new URLSearchParams(window.location.search);
-            const name = urlParams.get('name');
-            const lname = urlParams.get('lname');
-            const contact = urlParams.get('contact');
+        <!-- JavaScript -->
+        <script>
+            window.onload = function() {
+                // Get the name from the URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const name = urlParams.get('name');
+                const lname = urlParams.get('lname');
+                const contact = urlParams.get('contact');
 
-            // Update the welcome message
-            const welcomeMessage = document.getElementById('welcomeMessage');
-            welcomeMessage.textContent = `Hello ${name},`;
+                // Update the welcome message
+                const welcomeMessage = document.getElementById('welcomeMessage');
+                welcomeMessage.textContent = `Hello ${name},`;
 
-            // Get the form element
-            const requestForm = document.getElementById('requestForm');
+                // Get the form element
+                const requestForm = document.getElementById('requestForm');
 
-            // Add submit event listener to the requestForm
-            requestForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent form submission
+                // Add submit event listener to the requestForm
+                requestForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent form submission
 
-                // Get the form data
-                const product = document.getElementById('product').value;
-                const quantity = document.getElementById('quantity').value;
-                const cost = document.getElementById('cost').value;
+                    // Get the form data
+                    const product = document.getElementById('product').value;
+                    const quantity = document.getElementById('quantity').value;
+                    const cost = document.getElementById('cost').value;
 
-                // Create the data object to be sent
-                const data = {
-                    name: name, // New line: Include the name in the data object
-                    lname: lname,
-                    product: product,
-                    quantity: quantity,
-                    cost: cost,
-                    contact: contact
-                };
+                    // Create the data object to be sent
+                    const data = {
+                        name: name, // New line: Include the name in the data object
+                        lname: lname,
+                        product: product,
+                        quantity: quantity,
+                        cost: cost,
+                        contact: contact
+                    };
 
-                // Create and configure the XMLHttpRequest object
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', '<?php echo $_SERVER['PHP_SELF']; ?>', true);
-                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    // Create and configure the XMLHttpRequest object
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('POST', '<?php echo $_SERVER['PHP_SELF']; ?>', true);
+                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
-                // Define the callback function when the request completes
-                xhr.onload = function() {
-                    if (xhr.status === 200) {
-                        console.log(xhr.responseText); // Log the response from the server
-                        // Redirect to the Info Page with query parameters
-                        const redirectURL = `info.html?name=${name}&product=${product}&quantity=${quantity}&cost=${cost}`;
-                        window.location.href = redirectURL;
-                    } else {
-                        console.error('Error inserting data:', xhr.status);
-                    }
-                };
+                    // Define the callback function when the request completes
+                    xhr.onload = function() {
+                        if (xhr.status === 200) {
+                            console.log(xhr.responseText); // Log the response from the server
+                            // Redirect to the Info Page with query parameters
+                            const redirectURL = `info.html?name=${name}&product=${product}&quantity=${quantity}&cost=${cost}`;
+                            window.location.href = redirectURL;
+                        } else {
+                            console.error('Error inserting data:', xhr.status);
+                        }
+                    };
 
-                // Convert the data object to a URL-encoded string
-                const encodedData = Object.keys(data).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join('&');
+                    // Convert the data object to a URL-encoded string
+                    const encodedData = Object.keys(data).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`).join('&');
 
-                // Send the AJAX request
-                xhr.send(encodedData);
-            });
-        };
-    </script>
+                    // Send the AJAX request
+                    xhr.send(encodedData);
+                });
+            };
+        </script>
 
-</body>
+    </body>
 
 </html>
