@@ -120,7 +120,16 @@ $connection->close();
 </head>
 
 <body>
-    <!-- ... (rest of the HTML code) ... -->
+    <script>
+        function logout() {
+            if (confirm('Are you sure you want to log out?')) {
+                // User clicked "Yes," redirect to the home page
+                window.location.href = 'home.php';
+            } else {
+                // User clicked "No," do nothing, stay on the same page
+            }
+        }
+    </script>
 
 
     </head>
@@ -133,16 +142,16 @@ $connection->close();
                     <li>
                         <img src="logoa.png" alt="logo" width="100px" length="100px">
                     </li>
-                    <li><a href="home.php">Home</a></li>
+                    <li><a href="farmer.php">Farmer</a></li>
                     <li><a href="">Service</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="history.php">History</a></li>
                     <li><a href="admin.html">Admin</a></li>
-                    <li><a href="logout.php">Log out</a></li>
+                    <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="division">
+        <div class=" division">
             <section class="container forms" style="background-color:#ccc;">
 
                 <div class=" form login" style="background-color:#ccc;">
