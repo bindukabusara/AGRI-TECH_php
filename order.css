@@ -20,22 +20,12 @@
     background-size: cover;
     background-position: center;
 }
-#division {
-    display: flex;
-    background-color: #ffffff;
-    align-content: center;
-    justify-content: center;
-}
-#division div{
-    align-items: center;
-    margin: 10px;
-    width: 100%;
-}
+
 .form {
     margin-top: -10%;
     position: absolute;
-    max-width: 600px;
-    width: 80%;
+    max-width: 500px;
+    width: 90%;
     padding: 30px;
     border-radius: 10px;
     background:#ffffff;
@@ -90,14 +80,22 @@ form .field {
     margin-top: 30px;
 }
 
-.field input,
+.field input{
+        height: 100%;
+        width: 100%;
+        border: rgb(0, 0, 0);
+        font-size: 18px;
+        font-weight: 350;
+        border-radius: 15px;
+    }
+
 .field button {
-    height: 100%;
-    width: 100%;
+    height: 85%;
+    width: 70%;
     border: rgb(0, 0, 0);
     font-size: 18px;
     font-weight: 400;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 span{
     color: red;
@@ -116,18 +114,6 @@ span{
     font-size: 16px;
     font-weight: 400;
     border-radius: 10px;
-}
-
-.eye-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 16px;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 5px;
-
 }
 
 .form-link {
@@ -156,6 +142,7 @@ span{
 button {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 157, 84);
+
 }
 
 button:hover {
