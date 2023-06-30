@@ -2,11 +2,11 @@
 include 'connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $phone = $_POST['phone'];
+    $contact = $_POST['contact'];
 
     // Prepare and execute the query to fetch user data based on the phone number
     $stmt = $connection->prepare("SELECT * FROM users WHERE contact = ?");
-    $stmt->bind_param("s", $phone);
+    $stmt->bind_param("s", $contact);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -122,8 +122,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <form method="POST" action="#">
                     <div class="field input-field">
-                        <label for="phone">Phone Number<span class="required"></span></label>
-                        <input type="number" id="phone" name="phone" placeholder="Phone Number" class="input" required>
+                        <label for="contact">Phone Number<span class="required"></span></label>
+                        <input type="number" id="contact" name="contact" placeholder="Phone Number" class="input" required>
                     </div><br><br><br>
 
                     <div class="field button-field">
