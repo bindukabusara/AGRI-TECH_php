@@ -93,45 +93,80 @@ $connection->close();
             </ul>
         </div>
     </nav>
-    <section class="container forms">
-        <h1>Agri<span>Trans</span></h1>
-        <div class="form login">
-            <div class="form-content">
-                <h4 id="welcomeMessage"></h4><br>
-                <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                <h4>Submit food for sale</h4>
+    <div style="display: flex; justify-content: space-between; padding: 2px;">
+        <section class="container forms" style="background-color:#ccc;">
 
-                <form id="requestForm">
-                    <div class="field input-field">
-                        <label for="product">Product<span class="required"></span></label>
-                        <select class="selectProduct" id="product" name="product" required>
-                            <option value="">-- Please select a product --</option>
-                            <option value="beans">Beans</option>
-                            <option value="rice">Rice</option>
-                            <option value="wheat">Wheat</option>
-                            <option value="maize">Maize</option>
-                            <option value="peas">Peas</option>
-                        </select>
-                    </div>
+            <div class=" form login" style="background-color:#ccc;">
+                <div class="form-content">
 
-                    <div class="field input-field">
-                        <label for="quantity">Quantity (KG)<span class="required"></span></label>
-                        <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
-                    </div>
+                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                    <h4>step 1</h4>
+                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                    <h4>step 1</h4>
+                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                    <h4>step 1</h4>
+                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                    <h4>step 1</h4>
+                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                    <h4>step 1</h4>
+                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                    <h4>step 1</h4>
 
-                    <div class="field input-field">
-                        <label>Cost per Kg (SHS)<span class="required"></span></label>
-                        <input type="number" placeholder="How much do you want to sell per Kg?" class="input" id="cost" name="cost" required>
-                    </div><br><br><br>
-
-                    <div class="field button-field">
-                        <button type="submit"><strong>Submit Request</strong></button>
-                    </div><br>
-
-                </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="container forms">
+
+            <div class="form login">
+                <div class="form-content">
+                    <h3 id="welcomeMessage"></h3><br>
+                    <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
+                    <h4>Submit food for sale</h4>
+
+                    <form id="requestForm">
+                        <div class="field input-field">
+                            <label for="product">Product<span class="required"></span></label>
+                            <select class="selectProduct" id="product" name="product" required>
+                                <option value="">-- Please select a product --</option>
+                                <option value="beans">Beans</option>
+                                <option value="rice">Rice</option>
+                                <option value="wheat">Wheat</option>
+                                <option value="maize">Maize</option>
+                                <option value="peas">Peas</option>
+                            </select>
+                        </div>
+
+                        <div class="field input-field">
+                            <label for="quantity">Quantity (KG)<span class="required"></span></label>
+                            <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
+                        </div>
+
+                        <div class="field input-field">
+                            <label>Cost per Kg (SHS)<span class="required"></span></label>
+                            <input type="number" placeholder="How much do you want to sell per Kg?" class="input" id="cost" name="cost" required>
+                        </div><br><br><br>
+                        <center>
+                            <div class="field button-field">
+                                <button type="submit"><strong>Submit Request</strong></button>
+                            </div>
+                        </center><br>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="container forms">
+
+            <div class="form login">
+                <div class="form-content">
+
+
+                </div>
+            </div>
+        </section>
+    </div>
 
     </div>
 
