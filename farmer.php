@@ -64,6 +64,16 @@ $connection->close();
                 margin-bottom: 10px;
             }
 
+            .navlist ul {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .navlist ul li {
+                margin-bottom: 10px;
+            }
+
             /* (Add more responsive styles as needed) */
         }
 
@@ -126,6 +136,9 @@ $connection->close();
                     <li><a href="home.php">Home</a></li>
                     <li><a href="">Service</a></li>
                     <li><a href="">About Us</a></li>
+                    <li><a href="history.php">History</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="logout.php">Log out</a></li>
                 </ul>
             </div>
         </nav>
