@@ -157,18 +157,24 @@ $connection->close();
                 <div class=" form login" style="background-color:#ccc;">
                     <div class="form-content">
 
-                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                        <h4>step 1</h4>
-                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                        <h4>step 1</h4>
-                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                        <h4>step 1</h4>
-                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                        <h4>step 1</h4>
-                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                        <h4>step 1</h4>
-                        <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
-                        <h4>step 1</h4>
+                        <h3>DESCRIPTION:</h3><br>
+                        <h5>in case you are confused, these are the steps for this page:
+                        </h5><br>
+                        <ul>
+                            <li>Select the product that you want to sell (using the drop down list on the product)
+                            </li>
+                            <li>Specify the quantity (in killogram) of what you want to sell (between 50-200kg)
+                            </li>
+                            <li>specify the cost per killogram (for the product you are willing to sell)
+                            </li>
+                            <li>Then the last step is to click on "request" in order to confirm your selling request
+                            </li>
+                            <li>After the request, we will specify when you have to drop your product to our drop off point
+                            </li>
+                            <li>from there our team will do the rest for you !
+                            </li>
+                        </ul><br>
+                        <p><b>NB:</b> the payment will be done once the product has been delivered successfully! we will notify to you once that happens.</p>
 
                     </div>
                 </div>
