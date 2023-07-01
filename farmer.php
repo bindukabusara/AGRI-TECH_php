@@ -157,25 +157,25 @@ $connection->close();
                 <div class=" form login" style="background-color:#ccc;">
                     <div class="form-content">
 
-                        <h3>DESCRIPTION:</h3><br><br>
+                        <h3>DESCRIPTION:</h3><br>
                         <h4>In case you are confused, these are the steps for this page:
-                        </h4><br><br>
-                        <ul>
+                        </h4><br>
+                        <ul style="font-size: 16px;  justify-content: center;">
                             <li>Select the product that you want to sell (using the drop down list on the product)
-                            </li>
+                            </li><br>
                             <li>Specify the quantity (in killogram) of what you want to sell (between 50-200kg)
-                            </li>
+                            </li><br>
                             <li>specify the cost per killogram (for the product you are willing to sell)
-                            </li>
+                            </li><br>
                             <li>Then the last step is to click on "request" in order to confirm your selling request
-                            </li>
+                            </li><br>
                             <li>After the request, we will specify when you have to drop your product to our drop off point
-                            </li>
+                            </li><br>
                             <li>from there our team will do the rest for you !
                             </li>
-                        </ul><br><br>
-                        <p>
-                            <strong>NB:</strong> the payment will be done once the product has been delivered successfully! we will notify to you once that happens.
+                        </ul><br>
+                        <p style="font-size: 16px;">
+                            <strong style="font-size: 18px;">NB:</strong> the payment will be done once the product has been delivered successfully! we will notify to you once that happens.
                         </p>
 
                     </div>
