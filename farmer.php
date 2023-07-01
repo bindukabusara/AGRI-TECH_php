@@ -157,9 +157,9 @@ $connection->close();
                 <div class=" form login" style="background-color:#ccc;">
                     <div class="form-content">
 
-                        <h3>DESCRIPTION:</h3><br>
-                        <h5>in case you are confused, these are the steps for this page:
-                        </h5><br>
+                        <h3>DESCRIPTION:</h3><br><br>
+                        <h4>In case you are confused, these are the steps for this page:
+                        </h4><br><br>
                         <ul>
                             <li>Select the product that you want to sell (using the drop down list on the product)
                             </li>
@@ -173,8 +173,10 @@ $connection->close();
                             </li>
                             <li>from there our team will do the rest for you !
                             </li>
-                        </ul><br>
-                        <p><b>NB:</b> the payment will be done once the product has been delivered successfully! we will notify to you once that happens.</p>
+                        </ul><br><br>
+                        <p>
+                            <strong>NB:</strong> the payment will be done once the product has been delivered successfully! we will notify to you once that happens.
+                        </p>
 
                     </div>
                 </div>
