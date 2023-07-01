@@ -42,9 +42,27 @@ $connection->close();
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
+        /* Common styles for all screen sizes */
+        /* (Add your existing styles here) */
+
         /* Responsive styles */
         /* Small screens */
         @media screen and (max-width: 576px) {
+            .division {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form.login {
+                width: 90%;
+                max-width: 350px;
+                margin-bottom: 10px;
+            }
+
+            .form.login .form-content {
+                margin-bottom: 10px;
+            }
+
             .navlist ul {
                 flex-direction: column;
                 align-items: center;
@@ -52,29 +70,49 @@ $connection->close();
             }
 
             .navlist ul li {
-                margin-bottom: 2px;
+                margin-bottom: 10px;
             }
 
-            .container.forms {
-                width: 10%;
-                max-width: 200px;
-                margin: 0 auto;
-                background-color: #fff;
-            }
+            /* (Add more responsive styles as needed) */
         }
 
         /* Medium screens */
         @media screen and (min-width: 577px) and (max-width: 992px) {
-            .navlist ul {
-                justify-content: center;
+            .division {
+                flex-direction: column;
+                align-items: center;
             }
+
+            .form.login {
+                width: 80%;
+                max-width: 450px;
+                margin-bottom: 10px;
+            }
+
+            .form.login .form-content {
+                margin-bottom: 10px;
+            }
+
+            /* (Add more responsive styles as needed) */
         }
 
         /* Large screens */
         @media screen and (min-width: 993px) {
-            .navlist ul {
-                justify-content: flex-end;
+            .division {
+                flex-direction: row;
             }
+
+            .form.login {
+                width: 30%;
+                max-width: 550px;
+                margin-bottom: 0;
+            }
+
+            .form.login .form-content {
+                margin-bottom: 0;
+            }
+
+            /* (Add more responsive styles as needed) */
         }
     </style>
 </head>
@@ -94,41 +132,81 @@ $connection->close();
             </ul>
         </div>
     </nav>
+    <div class=" division">
+        <section class="container forms" style="background-color:#ccc;">
 
-    <section class="container forms">
-        <h1>Agri<span>Trans</span></h1>
-        <div class="form login">
-            <div class="form-content">
-                <h4 id="greetingMessage"></h4><br>
-                <p>Do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?</p><br>
-                <h4>Make your order</h4>
-                <form id="requestForm">
-                    <div class="field input-field">
-                        <label for="product">Product<span class="required"></span></label>
-                        <select class="selectProduct" id="product" name="product" required>
-                            <option value="">-- Please select a product --</option>
-                            <option value="beans">Beans</option>
-                            <option value="rice">Rice</option>
-                            <option value="wheat">Wheat</option>
-                            <option value="maize">Maize</option>
-                            <option value="peas">Peas</option>
-                        </select>
-                    </div>
-                    <div class="field input-field">
-                        <label for="quantity">Quantity (KG)<span class="required"></span></label>
-                        <input type="number" placeholder="50-200" class="input" min="50" max="200" value="50" required id="quantity" name="quantity">
-                    </div>
-                    <div class="field input-field">
-                        <label>Total Cost (SHS)</label>
-                        <input type="number" placeholder="" class="input" id="totalCost" name="totalCost" readonly>
-                    </div><br><br><br>
-                    <div class="field button-field">
-                        <button type="submit"><strong>Complete Order</strong></button>
-                    </div><br>
-                </form>
+            <div class=" form login" style="background-color:#ccc;">
+                <div class="form-content">
+
+                    <h3>DESCRIPTION:</h3><br>
+                    <h4>In case you are confused, these are the steps for this page:
+                    </h4><br>
+                    <ul style="font-size: 16px;  justify-content: center;">
+                        <li>Select the product that you want to buy (using the drop down list on the product)
+                        </li><br>
+                        <li>specify the quantity (in killogram) of what you want to buy (between 50-200kg)
+                        </li><br>
+                        <li>the total cost will be automatically displayed for you in order to confirm.
+                        </li><br>
+                        <li>If you confirm, you will be asked to pay the amount displayed
+                        </li><br>
+                        <li>Then you will be requested to submit your order to be worked on
+                        </li><br>
+                        <li>From there our team will do the rest for you !
+                        </li>
+                    </ul><br>
+                    <p style="font-size: 16px;">
+                        <strong style="font-size: 18px;">NB:</strong>you will be requested to notify once you've received the product, and that action will confirm the farmer's payment. If there is any issue, we will keep in touch with you H24 in order to work on each and every concen you might have.
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="container forms">
+            <h1>Agri<span>Trans</span></h1>
+            <div class="form login">
+                <div class="form-content">
+                    <h4 id="greetingMessage"></h4><br>
+                    <p>Do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?</p><br>
+                    <h4>Make your order</h4>
+                    <form id="requestForm">
+                        <div class="field input-field">
+                            <label for="product">Product<span class="required"></span></label>
+                            <select class="selectProduct" id="product" name="product" required>
+                                <option value="">-- Please select a product --</option>
+                                <option value="beans">Beans</option>
+                                <option value="rice">Rice</option>
+                                <option value="wheat">Wheat</option>
+                                <option value="maize">Maize</option>
+                                <option value="peas">Peas</option>
+                            </select>
+                        </div>
+                        <div class="field input-field">
+                            <label for="quantity">Quantity (KG)<span class="required"></span></label>
+                            <input type="number" placeholder="50-200" class="input" min="50" max="200" value="50" required id="quantity" name="quantity">
+                        </div>
+                        <div class="field input-field">
+                            <label>Total Cost (SHS)</label>
+                            <input type="number" placeholder="" class="input" id="totalCost" name="totalCost" readonly>
+                        </div><br><br><br>
+                        <center>
+                            <div class="field button-field">
+                                <button type="submit"><strong>Complete Order</strong></button>
+                            </div>
+                        </center>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="container forms">
+
+            <div class="form login">
+                <div class="form-content">
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- JavaScript -->
     <script>
