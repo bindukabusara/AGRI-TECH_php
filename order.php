@@ -125,10 +125,12 @@ $connection->close();
                 <li>
                     <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
-                <li><a href="home.php"><b>Home</b></a></li>
+                <li><a href="order.php">Order</a></li>
                 <li><a href="">Service</a></li>
                 <li><a href="">About Us</a></li>
+                <li><a href="history.php">History</a></li>
                 <li><a href="admin.html">Admin</a></li>
+                <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
             </ul>
         </div>
     </nav>
