@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
     $name = $_POST['name'];
     $lname = $_POST['lname'];
-
     $product = $_POST['product'];
     $quantity = $_POST['quantity'];
     $cost = $_POST['cost'];
@@ -143,7 +142,6 @@ $connection->close();
                         <img src="logoa.png" alt="logo" width="100px" length="100px">
                     </li>
                     <li><a href="farmer.php">Farmer</a></li>
-                    <li><a href="">Service</a></li>
                     <li><a href="">About Us</a></li>
                     <li><a href="history.php">History</a></li>
                     <li><a href="admin.html">Admin</a></li>
@@ -280,8 +278,8 @@ $connection->close();
                     xhr.onload = function() {
                         if (xhr.status === 200) {
                             console.log(xhr.responseText); // Log the response from the server
-                            // Redirect to the Info Page with query parameters
-                            const redirectURL = `info.html?name=${name}&product=${product}&quantity=${quantity}&cost=${cost}`;
+                            // Assuming you have a variable named `contact` with the contact value
+                            const redirectURL = `info.html?name=${name}&lname=${lname}&product=${product}&quantity=${quantity}&cost=${cost}&contact=${contact}`;
                             window.location.href = redirectURL;
                         } else {
                             console.error('Error inserting data:', xhr.status);
