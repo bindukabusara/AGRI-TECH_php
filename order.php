@@ -168,7 +168,7 @@ $connection->close();
             <h1>Agri<span>Trans</span></h1>
             <div class="form login">
                 <div class="form-content">
-                    <h4 id="greetingMessage"></h4><br>
+                    <h3 id="greetingMessage"></h3><br>
                     <p>Do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?</p><br>
                     <h4>Make your order</h4>
                     <form id="requestForm">
