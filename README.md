@@ -1,9 +1,9 @@
 
 ## 1. The purpose of this project
 
-    The purpose of the software project for our food transportation business is to develop a comprehensive and efficient system that facilitates the transportation of agricultural products from farmers to marketplaces.
+The purpose of the software project for our food transportation business is to develop a comprehensive and efficient system that facilitates the transportation of agricultural products from farmers to marketplaces.
 
-    This software project will optimize the logistical processes involved in the food supply chain, ultimately improving farmers' livelihoods, increasing their access to markets, reducing food wastage, and ensuring the delivery of quality products to consumers.
+This software project will optimize the logistical processes involved in the food supply chain, ultimately improving farmers' livelihoods, increasing their access to markets, reducing food wastage, and ensuring the delivery of quality products to consumers.
 
 ## 2. Problems that the project solve or address
 
