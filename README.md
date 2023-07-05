@@ -1,6 +1,7 @@
+
 ## 1. The purpose of this project
 
-     The purpose of the software project for our food transportation business is to develop a comprehensive and efficient system that facilitates the transportation of agricultural products from farmers to marketplaces.  This software project will optimize the logistical processes involved in the food supply chain, ultimately improving farmers' livelihoods, increasing their access to markets, reducing food wastage, and ensuring the delivery of quality products to consumers.
+    The purpose of the software project for our food transportation business is to develop a comprehensive and efficient system that facilitates the transportation of agricultural products from farmers to marketplaces.  This software project will optimize the logistical processes involved in the food supply chain, ultimately improving farmers' livelihoods, increasing their access to markets, reducing food wastage, and ensuring the delivery of quality products to consumers.
 
 ## 2. Problems that the project solve or address
 
@@ -30,7 +31,7 @@ One of the key features that we want to integrate for our project is mobile Acce
 
 ## 4. Technologies or programming languages that are used in your project
 
-Backend Development: PHP (possibly Python too)
+Backend Development: PHP
 Frontend Development: HTML, CSS, JavaScript.
 
 For our database Management, we will use a Relational Database Management System (RDBMS), such as MySQL (we will be using XAMPP because it contains MySQL).
@@ -40,7 +41,7 @@ For our database Management, we will use a Relational Database Management System
 ## 6. How to install or set up our app or how to access our website
 
 The software that will be used to access our system is a website. So it can be easily installed and accessed through a computer. But anyone with a smartphone can easily install our app (in development) which will have the same features as our website. This is to enable anyone with a smartphone to get access to our services. For the website, To access it, there is only the need of connection, a computer or a phone and it can be easily installed as an application through Play Store or app store, depending on the device used.
-The setup is easy, first is the registration on the websites’ sign up page, by providing your name,a valid phone number, and your role in the system. Then, once you are in the system, you will be redirected to the pag designed to you (whether you are a farmer or a wholesaler).
+The setup is easy, first is the registration on the websites sign up page, by providing your name,a valid phone number, and your role in the system. Then, once you are in the system, you will be redirected to the pag designed to you (whether you are a farmer or a wholeseller).
 
 ## 7. These are the steps to run or deploy the project
 
@@ -88,7 +89,7 @@ Expansion and Market Penetration: Gradually scale up the deployment of the softw
 
 ## 17. Acknowledgments or credits we want to include for external libraries, resources, or contributors:
 
-We don’t have any credit, resources or external libraries yet. The contributors are going to be updated as we evolve in the development and the implementation.
+We do not have any credit, resources or external libraries yet. The contributors are going to be updated as we evolve in the development and the implementation.
 
 ## 18. additional information or context that would be helpful for users or developers:
 
