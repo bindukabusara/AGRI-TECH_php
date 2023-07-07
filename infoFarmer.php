@@ -118,10 +118,8 @@
                 <li>
                     <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
-                <li><a href="farmer.php">Farmer</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="history.php">History</a></li>
+                <li><a href="infoFarmer.php">Farmer</a></li>
+                <li><a href="infoOrder.php">Order</a></li>
                 <li><a href="admin.html">Admin</a></li>
                 <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
             </ul>
