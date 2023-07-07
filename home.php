@@ -76,8 +76,7 @@
                     <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
                 <li><a href="home.php">Home</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">About Us</a></li>
+
                 <li><a href="admin.html">Admin</a></li>
             </ul>
         </div>
