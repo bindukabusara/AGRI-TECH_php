@@ -128,10 +128,11 @@
             const product = urlParams.get('product');
             const quantity = urlParams.get('quantity');
             const cost = urlParams.get('cost');
+            const totalcost = cost * quantity;
 
             // Update the welcome message
             const welcomeMessage = document.getElementById('welcomeMessage');
-            welcomeMessage.textContent = `Hey, ${name}! you want to sell ${quantity} KG of ${product} to the unit cost of ${cost} SHS and expect your payment in few days `;
+            welcomeMessage.textContent = `Hey, ${name}! you want to sell ${quantity} KG of ${product} to the unit cost of ${cost} SHS and expect an amount of ${totalcost} SHS in few days `;
         };
     </script>
 
