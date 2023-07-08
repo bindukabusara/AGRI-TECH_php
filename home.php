@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="home2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
-
     <style>
         /* Responsive styles */
         /* Small screens */
@@ -72,11 +71,8 @@
     <nav class="navlist">
         <div class="sub">
             <ul>
-                <li>
-                    <img src="logoa.png" alt="logo" width="100px" length="100px">
-                </li>
-                <li><a href="home.php">Home</a></li>
-
+                <li><img src="logoa.png" alt="logo" width="100px" length="100px"></li>
+                <li><a href="home.php"><b><u>Home</u></b></a></li>
                 <li><a href="admin.html">Admin</a></li>
             </ul>
         </div>
@@ -84,13 +80,21 @@
 
     <section class="container">
         <br>
-        <br><br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
         <h1>
             <center>Trade food easily</center>
         </h1>
-        <p><strong>AgriTrans</strong>: Connecting farmers and market vendors <br>for easy food sales and purchases.</p><br>
-        <br>
 
+        <p>
+          <strong>AgriTrans</strong>: Connecting farmers and market vendors <br>for easy food sales and purchases.
+        </p>
+        <br>
+        <br>
 
         <!--button-->
         <div class="field button-field">
@@ -100,12 +104,9 @@
                         <button class="button" type="submit"><a href="log.php"><strong style="color: #000;">LOG IN</strong></a></button>
                         <button class="button" type="submit"><a href="singup.php"><strong style="color: #000;">SIGN UP</strong></a></button>
                     </div>
-
-
                 </form>
             </center>
         </div>
-
 
     </section>
 
