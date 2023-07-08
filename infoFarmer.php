@@ -146,7 +146,11 @@
             </thead>
             <tbody>
                 <?php
+                session_start(); // Start the session
                 include 'connection.php'; // Include the database connection file
+
+                // Retrieve the contact from the session variable
+                $contact = $_SESSION['contact'];
 
                 // Fetch data from the farmer table
                 $sql = "SELECT * FROM farmer";
