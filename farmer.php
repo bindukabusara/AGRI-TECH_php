@@ -141,7 +141,7 @@ $connection->close();
                     <li>
                         <img src="logoa.png" alt="logo" width="100px" length="100px">
                     </li>
-                    <li><a href="farmer.php"><b>Farmer</b></a></li>
+                    <li><a href="farmer.php"><b><u>Farmer</u></b></a></li>
                     <li><a href="history.php">History</a></li>
                     <li><a href="admin.html">Admin</a></li>
                     <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
@@ -202,7 +202,7 @@ $connection->close();
 
                             <div class="field input-field">
                                 <label for="quantity">Quantity (KG)<span class="required"></span></label>
-                                <input type="number" min="50" max="200" value="50" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
+                                <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
                             </div>
 
                             <div class="field input-field">
