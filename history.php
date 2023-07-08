@@ -1,3 +1,19 @@
+<?php
+session_start(); // Start the session
+
+include 'connection.php'; // Include the database connection file
+
+// Retrieve the contact from the session variable
+$contact = $_SESSION['contact'];
+
+// Prepare and execute the query to fetch data based on the contact
+$stmt = $connection->prepare("SELECT * FROM farmer WHERE contact = ?");
+$stmt->bind_param("s", $contact);
+$stmt->execute();
+$result = $stmt->get_result();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,7 +130,7 @@
                     <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
                 <li><a href="farmer.php">Farmer</a></li>
-                <li><a href="history.php"><b>History</b></a></li>
+                <li><a href="history.php"><b><u>History</u></b></a></li>
                 <li><a href="admin.html">Admin</a></li>
                 <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
             </ul>
@@ -141,7 +157,33 @@
             </thead>
             <tbody>
                 <?php
+                // Check if there are any rows returned
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        // Retrieve data for each row
+                        $ID = $row['ID'];
+                        $name = $row['name'];
+                        $product = $row['product'];
+                        $quantity = $row['quantity'];
+                        $cost = $row['cost'];
+                        $contact = $row['contact'];
 
+                        // Display the data in the table
+                        echo "<tr>
+                <td>$ID</td>
+                <td>$name</td>
+                <td>$product</td>
+                <td>$quantity</td>
+                <td>$cost</td>
+                <td>$contact</td>
+              </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='6'>No data found</td></tr>";
+                }
+
+                $stmt->close();
+                $connection->close();
                 ?>
 
 
