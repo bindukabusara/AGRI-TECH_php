@@ -1,4 +1,5 @@
 <?php
+
 include 'connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -17,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($role === 'farmer') {
             // Redirect to farmer page
-            header("Location: farmer.php?name=" . $user['name']);
+            header("Location: farmer.php?name=" . $user['name'] . "&contact=" . $contact);
             exit();
         } elseif ($role === 'whole seller') {
             // Redirect to order page for whole seller
-            header("Location: order.php");
+            header("Location: order.php?name=" . $user['name'] . "&contact=" . $contact);
             exit();
         }
     } else {
