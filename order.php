@@ -136,7 +136,7 @@ $connection->close();
                 <li>
                     <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
-                <li><a href="order.php"><b>Order</b></a></li>
+                <li><a href="order.php"><b><u>Market</u></b></a></li>
                 <li><a href="history.php">History</a></li>
                 <li><a href="admin.html">Admin</a></li>
                 <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
@@ -149,10 +149,10 @@ $connection->close();
             <div class=" form login" style="background-color:#ccc;">
                 <div class="form-content">
 
-                    <h3>DESCRIPTION:</h3><br>
-                    <h4>In case you are confused, these are the steps for this page:
-                    </h4><br>
-                    <ul style="font-size: 16px;  justify-content: center;">
+                    <p>DESCRIPTION:</p><br>
+                    <p>In case you are confused, these are the steps for this page:
+                    </p><br>
+                    <ul style="font-size: 15px;  justify-content: center;">
                         <li>Select the product that you want to buy (using the drop down list on the product)
                         </li><br>
                         <li>specify the quantity (in killogram) of what you want to buy (between 50-200kg)
@@ -166,8 +166,8 @@ $connection->close();
                         <li>From there our team will do the rest for you !
                         </li>
                     </ul><br>
-                    <p style="font-size: 16px;">
-                        <strong style="font-size: 18px;">NB:</strong>you will be requested to notify once you've received the product, and that action will confirm the farmer's payment. If there is any issue, we will keep in touch with you H24 in order to work on each and every concen you might have.
+                    <p style="font-size: 15px;">
+                        <strong style="font-size: 15px;">NB:</strong>you will be requested to notify once you've received the product, and that action will confirm the farmer's payment. If there is any issue, we will keep in touch with you H24 in order to work on each and every concen you might have.
 
                 </div>
             </div>
