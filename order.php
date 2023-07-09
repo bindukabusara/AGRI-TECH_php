@@ -219,7 +219,7 @@ $connection->close();
         </section>
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript-->
     <script>
         // Get the URL parameters
         const urlParams = new URLSearchParams(window.location.search);
