@@ -4,9 +4,9 @@ session_start(); // Start the session
 include 'connection.php';
 
 if (isset($_POST['submit'])) {
-    $name = $_SESSION['name'];
+    $name = $_POST['name'];
     $lname = $_POST['lname'];
-    $contact = $_SESSION['contact'];
+    $contact = $_POST['contact'];
     $role = $_POST['role'];
 
     $userSql = "INSERT INTO users (name, lname, contact, role)
@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
                 </li>
                 <li><a href="home.php"><b>Home</b></a></li>
 
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="adminlog.php">Admin</a></li>
             </ul>
         </div>
     </nav>

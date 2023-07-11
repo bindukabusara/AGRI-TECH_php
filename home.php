@@ -73,7 +73,7 @@
             <ul>
                 <li><img src="logoa.png" alt="logo" width="100px" length="100px"></li>
                 <li><a href="home.php"><b><u>Home</u></b></a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="adminlog.php">Admin</a></li>
             </ul>
         </div>
     </nav>
@@ -91,7 +91,7 @@
         </h1>
 
         <p>
-          <strong>AgriTrans</strong>: Connecting farmers and market vendors <br>for easy food sales and purchases.
+            <strong>AgriTrans</strong>: Connecting farmers and market vendors <br>for easy food sales and purchases.
         </p>
         <br>
         <br>
