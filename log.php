@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
                 <li><a href="home.php"><b>Home</b></a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="adminlog.php">Admin</a></li>
             </ul>
         </div>
     </nav>
