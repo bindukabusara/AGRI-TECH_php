@@ -25,10 +25,10 @@ if (isset($_POST['submit'])) {
         $_SESSION['contact'] = $contact;
 
         if ($role === 'farmer') {
-            header("Location: farmer.php");
+            header("Location: famersin.php?name=$name&contact=$contact");
             exit();
         } elseif ($role === 'whole seller') {
-            header("Location: order.php?name=$name&contact=$contact");
+            header("Location: ordersin.php?name=$name&contact=$contact");
             exit();
         }
     } else {
