@@ -118,7 +118,7 @@
                 </li>
                 <li><a href="infoFarmer.php">Farmer</a></li>
                 <li><a href="infoOrder.php">Order</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="adminlog.php">Admin</a></li>
                 <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
             </ul>
         </div>
