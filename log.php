@@ -16,13 +16,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = $result->fetch_assoc();
         $role = $user['role'];
 
+        // Store the fetched name and contact in session variables
+        $_SESSION['name'] = $user['name'];
+        $_SESSION['contact'] = $contact;
+
         if ($role === 'farmer') {
             // Redirect to farmer page
-            header("Location: farmer.php?name=" . $user['name'] . "&contact=" . $contact);
+            header("Location: farmer.php?name=" . urlencode($user['name']) . "&contact=$contact");
             exit();
         } elseif ($role === 'whole seller') {
             // Redirect to order page for whole seller
-            header("Location: order.php?name=" . $user['name'] . "&contact=" . $contact);
+            header("Location: order.php?name=" . urlencode($user['name']) . "&contact=$contact");
             exit();
         }
     } else {
@@ -30,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
+
 
 
 <!--code HTML-->
