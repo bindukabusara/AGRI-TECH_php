@@ -146,7 +146,7 @@ $connection->close();
                 </li>
                 <li><a href="order.php"><b><u>Market</u></b></a></li>
                 <li><a href="history.php">History</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="adminlog.php">Admin</a></li>
                 <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
             </ul>
         </div>
