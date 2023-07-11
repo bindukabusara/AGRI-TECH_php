@@ -1,15 +1,20 @@
 <?php
+session_start(); //start the session_start
+
 include 'connection.php'; // Include the database connection file
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
-    $name = $_POST['name'];
+
     $lname = $_POST['lname'];
     $product = $_POST['product'];
     $quantity = $_POST['quantity'];
     $cost = $_POST['cost'];
-    $contact = $_POST['contact'];
+
+    // Retrieve the name and contact from the session variables
+    $name = $_SESSION['name'];
+    $contact = $_SESSION['contact'];
 
     // Create the SQL INSERT query
     $sql = "INSERT INTO farmer (name, lname, product, quantity, cost, contact) VALUES ('$name','$lname', '$product', '$quantity', '$cost','$contact')"; // New line: Include the name in the query
@@ -19,8 +24,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error inserting data: " . $connection->error;
     }
+
+    // Update the session variables with the new VALUES
+    $_SESSION['name'] = $name;
+    $_SESSION['contact'] = $contact;
+
     exit; // Terminate the script execution after handling the data insertion
 }
+// Get the name and contact from the URL parameters
+$name = $_GET['name'];
+$contact = $_GET['contact'];
+
+// store the name and contact in the session variables
+$_SESSION['name'] = $name;
+$_SESSION['contact'] = $contact;
+
+
 $connection->close();
 ?>
 
@@ -183,7 +202,7 @@ $connection->close();
 
                 <div class="form login">
                     <div class="form-content">
-                        <h3 id="welcomeMessage"></h3><br>
+                        <h3 id="welcomeMessage">Hello <?php echo $name; ?>,</h3><br>
                         <p>Please, enter the product you would like to sell, then we will tell you how much you will get.</p><br>
                         <h4>Submit food for sale</h4>
 
