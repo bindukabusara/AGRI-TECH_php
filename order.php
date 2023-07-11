@@ -1,15 +1,18 @@
 <?php
+session_start(); // Start the session
+
 include 'connection.php'; // Include the database connection file
 
 // Check if the form is submitted
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the form data
-    $name = $_POST['name'];
     $product = $_POST['product'];
     $quantity = $_POST['quantity'];
     $totalCost = $_POST['totalCost'];
-    $contact = $_POST['contact'];
+
+    // Retrieve the name and contact from the session variables
+    $name = $_SESSION['name'];
+    $contact = $_SESSION['contact'];
 
     // Create the SQL INSERT query
     $sql = "INSERT INTO `order` (name, product, quantity, totalCost, contact) VALUES ('$name', '$product', '$quantity', '$totalCost', '$contact')";
@@ -19,8 +22,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error inserting data: " . $connection->error;
     }
+
+    // Update the session variables with the new values
+    $_SESSION['name'] = $name;
+    $_SESSION['contact'] = $contact;
+
     exit; // Terminate the script execution after handling the data insertion
 }
+
+// Get the name and contact from the URL parameters
+$name = $_GET['name'];
+$contact = $_GET['contact'];
+
+// Store the name and contact in session variables
+$_SESSION['name'] = $name;
+$_SESSION['contact'] = $contact;
+
 $connection->close();
 ?>
 
@@ -177,10 +194,13 @@ $connection->close();
             <h1>Agri<span>Trans</span></h1>
             <div class="form login">
                 <div class="form-content">
-                    <h3 id="greetingMessage"></h3><br>
+                    <h3 id="greetingMessage">Hello <?php echo $name; ?>,</h3><br>
+
                     <p>Do you want to order grains (beans, Rice, Wheat, etc.) and get them delivered to your market?</p><br>
                     <h4>Make your order</h4>
                     <form id="requestForm">
+                        <input type="hidden" name="name" value="<?php echo $name; ?>" readonly>
+                        <input type="hidden" name="contact" value="<?php echo $contact; ?>" readonly>
                         <div class="field input-field">
                             <label for="product">Product<span class="required"></span></label>
                             <select class="selectProduct" id="product" name="product" required>
@@ -199,7 +219,8 @@ $connection->close();
                         <div class="field input-field">
                             <label>Total Cost (SHS)</label>
                             <input type="number" placeholder="" class="input" id="totalCost" name="totalCost" readonly>
-                        </div><br><br><br>
+                        </div>
+                        <br><br><br>
                         <center>
                             <div class="field button-field">
                                 <button type="submit"><strong>Complete Order</strong></button>
@@ -223,16 +244,18 @@ $connection->close();
     <script>
         // Get the URL parameters
         const urlParams = new URLSearchParams(window.location.search);
-        const name = urlParams.get('name');
+        const name = "<?php echo isset($_GET['name']) ? $_GET['name'] : ''; ?>";
         const contact = urlParams.get('contact');
 
         // Get references to the elements
-        const greetingMessage = document.getElementById('greetingMessage');
+
         const productSelect = document.getElementById('product');
         const quantityInput = document.getElementById('quantity');
         const totalCostInput = document.getElementById('totalCost');
 
+
         // Update the greeting message with the name
+        const greetingMessage = document.getElementById('greetingMessage');
         greetingMessage.textContent = `Hello ${name}, `;
 
         // Add an event listener to detect changes in the inputs
