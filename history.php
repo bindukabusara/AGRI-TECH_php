@@ -3,8 +3,8 @@ session_start(); // Start the session
 
 include 'connection.php'; // Include the database connection file
 
-// Retrieve the contact from the session variable
-$contact = $_SESSION['contact'];
+// Retrieve the contact from the URL parameter
+$contact = $_GET['contact'];
 
 // Prepare and execute the query to fetch data based on the contact
 $stmt = $connection->prepare("SELECT * FROM farmer WHERE contact = ?");
@@ -116,8 +116,8 @@ $result = $stmt->get_result();
     <script>
         function logout() {
             if (confirm('Are you sure you want to log out?')) {
-                // User clicked "Yes," redirect to the home page
-                window.location.href = 'home.php';
+                // User clicked "Yes," redirect to the home page with name and contact as URL parameters
+                window.location.href = 'home.php?name=<?php echo $name; ?>&contact=<?php echo $contact; ?>';
             } else {
                 // User clicked "No," do nothing, stay on the same page
             }
@@ -131,7 +131,7 @@ $result = $stmt->get_result();
                 </li>
                 <li><a href="farmer.php">Farmer</a></li>
                 <li><a href="history.php"><b><u>History</u></b></a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li><a href="adminlog.php">Admin</a></li>
                 <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
             </ul>
         </div>
