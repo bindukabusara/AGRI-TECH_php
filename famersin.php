@@ -29,6 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     exit; // Terminate the script execution after handling the data insertion
 }
+// Get the name and contact from the URL parameters
+$name = $_GET['name'];
+$contact = $_GET['contact'];
+
+// store the name and contact in the session variables
+$_SESSION['name'] = $name;
+$_SESSION['contact'] = $contact;
 $connection->close();
 ?>
 
@@ -149,7 +156,7 @@ $connection->close();
                     </li>
                     <li><a href="farmer.php"><b><u>Farmer</u></b></a></li>
                     <li><a href="history.php">History</a></li>
-                    <li><a href="admin.html">Admin</a></li>
+                    <li><a href="adminlog.php">Admin</a></li>
                     <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
                 </ul>
             </div>
@@ -194,8 +201,8 @@ $connection->close();
                         <h4>Submit food for sale</h4>
 
                         <form id="requestForm">
-                            <input type="name" name="name" value="<?php echo $name; ?>" readonly>
-                            <input type="number" name="contact" value="<?php echo $contact; ?>" readonly>
+                            <input type="hidden" name="name" value="<?php echo $name; ?>" readonly>
+                            <input type="hidden" name="contact" value="<?php echo $contact; ?>" readonly>
                             <div class="field input-field">
                                 <label for="product">Product<span class="required"></span></label>
                                 <select class="selectProduct" id="product" name="product" required>
