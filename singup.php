@@ -1,10 +1,12 @@
 <?php
+session_start(); // Start the session
+
 include 'connection.php';
 
 if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
+    $name = $_SESSION['name'];
     $lname = $_POST['lname'];
-    $contact = $_POST['contact'];
+    $contact = $_SESSION['contact'];
     $role = $_POST['role'];
 
     $userSql = "INSERT INTO users (name, lname, contact, role)
@@ -18,13 +20,15 @@ if (isset($_POST['submit'])) {
         echo "Contact: $contact<br>";
         echo "Role: $role";
 
+        // Store the name and contact in session variables
+        $_SESSION['name'] = $name;
+        $_SESSION['contact'] = $contact;
+
         if ($role === 'farmer') {
-            $redirectURL = "farmer.php?name=" . urlencode($name) . "&contact=" . urlencode($contact);
-            header("Location: $redirectURL");
+            header("Location: farmer.php");
             exit();
         } elseif ($role === 'whole seller') {
-            $redirectURL = "order.php?name=" . urlencode($name) . "&contact=" . urlencode($contact);
-            header("Location: $redirectURL");
+            header("Location: order.php?name=$name&contact=$contact");
             exit();
         }
     } else {
@@ -32,6 +36,7 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
+
 
 
 
