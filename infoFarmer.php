@@ -91,8 +91,42 @@
         tr:hover {
             background-color: #e6e6e6;
         }
+
+        /* Button styles */
+        .statement-button {
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            background-color: #ff9999;
+            /* Not Completed color */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .completed {
+            background-color: rgb(0, 157, 84);
+            /* Completed color */
+        }
+
+        /* Button styles */
+        .statement-button {
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            background-color: #ff9999;
+            /* Not Completed color */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .completed {
+            background-color: rgb(0, 157, 84);
+            /* Completed color */
+        }
     </style>
-    </style>
+
 
 
 
@@ -141,16 +175,16 @@
                     <th>PRODUCT</th>
                     <th>QUANTITY (KG)</th>
                     <th>COST PER KG (SHS)</th>
-                    <th colspan="2">Phone Number</th>
+                    <th>Phone Number</th>
+                    <th colspan="2">Statement</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                session_start(); // Start the session
+
                 include 'connection.php'; // Include the database connection file
 
-                // Retrieve the contact from the session variable
-                $contact = $_SESSION['contact'];
+
 
                 // Fetch data from the farmer table
                 $sql = "SELECT * FROM farmer";
@@ -167,6 +201,9 @@
                         $cost = $row['cost'];
                         $contact = $row['contact'];
 
+                        // Retrieve the completed status from localStorage if available
+                        $completed = isset($_COOKIE["completed_$ID"]) && $_COOKIE["completed_$ID"] === 'true';
+
                         // Display the data in the table
                         echo "<tr>
                 <td>$ID</td>
@@ -175,10 +212,13 @@
                 <td>$quantity</td>
                 <td>$cost</td>
                 <td>$contact</td>
+                <td>
+                    <button class='statement-button" . ($completed ? ' completed' : '') . "' id='statement-button-$ID' onclick='toggleStatement($ID)'>" . ($completed ? 'Completed' : 'Not Completed') . "</button>
+                </td>
               </tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='5'>No data found</td></tr>";
+                    echo "<tr><td colspan='6'>No data found</td></tr>";
                 }
 
                 $connection->close();
@@ -188,6 +228,24 @@
             </tbody>
         </table>
     </center>
+    <script>
+        function toggleStatement(ID) {
+            const button = document.getElementById(`statement-button-${ID}`);
+            const isCompleted = button.classList.toggle('completed');
+
+            if (isCompleted) {
+                button.textContent = 'Completed';
+                localStorage.setItem(`completed_${ID}`, 'true'); // Store completed status in localStorage
+            } else {
+                button.textContent = 'Not Completed';
+                localStorage.removeItem(`completed_${ID}`); // Remove completed status from localStorage
+            }
+
+            // Send an AJAX request or use fetch to update the "is_completed" status on the server
+            // You can send the ID and isCompleted value in the request payload
+            // Update the database accordingly on the server-side
+        }
+    </script>
 </body>
 
 
