@@ -11,10 +11,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute();
     $result = $stmt->get_result();
 
+
+
     // Check if a user with the provided phone number exists in the database
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
         $role = $user['role'];
+
+
 
         // Store the fetched name and contact in session variables
         $_SESSION['name'] = $user['name'];
