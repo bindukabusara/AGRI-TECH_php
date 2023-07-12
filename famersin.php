@@ -217,7 +217,7 @@ $connection->close();
 
                             <div class="field input-field">
                                 <label for="quantity">Quantity (KG)<span class="required"></span></label>
-                                <input type="number" placeholder="How many Kg do you have?" class="input" required id="quantity" name="quantity">
+                                <input type="number" placeholder="How many Kg do you have?" class="input" min="50" max="200" value="50" required id="quantity" name="quantity">
                             </div>
 
                             <div class="field input-field">
