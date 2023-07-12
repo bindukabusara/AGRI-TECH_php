@@ -129,7 +129,7 @@ $result = $stmt->get_result();
                 <li>
                     <img src="logoa.png" alt="logo" width="100px" length="100px">
                 </li>
-                <li><a href="farmer.php">Farmer</a></li>
+                <li><a href="ordersin.php">Order</a></li>
                 <li><a href="history.php"><b><u>History</u></b></a></li>
                 <li><a href="adminlog.php">Admin</a></li>
                 <li><a href=" javascript:void(0);" onclick="logout()">Log out</a></li>
