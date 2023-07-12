@@ -91,7 +91,25 @@
         tr:hover {
             background-color: #e6e6e6;
         }
+
+        /* Button styles */
+        .statement-button {
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            background-color: #ff9999;
+            /* Not Completed color */
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .completed {
+            background-color: rgb(0, 157, 84);
+            /* Completed color */
+        }
     </style>
+
 
 
     <script>
@@ -136,7 +154,8 @@
                     <th>PRODUCT</th>
                     <th>QUANTITY (KG)</th>
                     <th>TOTAL COST PER KG (SHS)</th>
-                    <th colspan="2">Phone Number</th>
+                    <th>Phone Number</th>
+                    <th colspan="2">Statement</th>
                 </tr>
             </thead>
             <tbody>
@@ -166,6 +185,10 @@
             <td>$quantity</td>
             <td>$totalCost</td>
             <td>$contact</td>
+
+            <td>
+                <button class='statement-button' id='statement-button-$ID' onclick='toggleStatement($ID)'>Not Completed</button>
+            </td>
           </tr>";
                     }
                 } else {
@@ -179,6 +202,22 @@
             </tbody>
         </table>
     </center>
+    <script>
+        function toggleStatement(ID) {
+            const button = document.getElementById(`statement-button-${ID}`);
+            const isCompleted = button.classList.toggle('completed');
+
+            if (isCompleted) {
+                button.textContent = 'Completed';
+            } else {
+                button.textContent = 'Not Completed';
+            }
+
+            // Send an AJAX request or use fetch to update the "is_completed" status on the server
+            // You can send the ID and isCompleted value in the request payload
+            // Update the database accordingly on the server-side
+        }
+    </script>
 </body>
 
 
