@@ -1,43 +1,3 @@
-<?php
-
-include 'connection.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $contact = $_POST['contact'];
-
-    // Prepare and execute the query to fetch user data based on the phone number
-    $stmt = $connection->prepare("SELECT * FROM adm WHERE contact = ?");
-    $stmt->bind_param("s", $contact);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    // Check if a user with the provided phone number exists in the database
-    if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-        $role = $user['role'];
-
-        // Store the fetched name and contact in session variables
-        $_SESSION['name'] = $user['name'];
-        $_SESSION['contact'] = $contact;
-
-        if ($role === 'adm') {
-            // Redirect to farmer page
-            header("Location: admin.html");
-            exit();
-        } elseif ($role === 'whole seller') {
-            // Redirect to order page for whole seller
-            header("Location: admin.html");
-            exit();
-        }
-    } else {
-        echo "Code invalid";
-    }
-}
-?>
-
-
-
-
 <!--code HTML-->
 <!DOCTYPE html>
 <html lang="en">
@@ -128,7 +88,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <form method="POST" action="#">
                     <div class="field input-field">
                         <label for="contact">Enter your code<span class="required"></span></label><br><br>
+
                         <input type="number" id="contact" name="contact" placeholder="code" class="input" required>
+                        <?php
+
+                        include 'connection.php';
+
+                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                            $contact = $_POST['contact'];
+
+                            // Prepare and execute the query to fetch user data based on the phone number
+                            $stmt = $connection->prepare("SELECT * FROM adm WHERE contact = ?");
+                            $stmt->bind_param("s", $contact);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
+
+                            // Check if a user with the provided phone number exists in the database
+                            if ($result->num_rows > 0) {
+                                $user = $result->fetch_assoc();
+                                $role = $user['role'];
+
+                                // Store the fetched name and contact in session variables
+                                $_SESSION['name'] = $user['name'];
+                                $_SESSION['contact'] = $contact;
+
+                                if ($role === 'adm') {
+                                    // Redirect to farmer page
+                                    header("Location: admin.html");
+                                    exit();
+                                } elseif ($role === 'whole seller') {
+                                    // Redirect to order page for whole seller
+                                    header("Location: admin.html");
+                                    exit();
+                                }
+                            } else {
+                                echo "Code invalid";
+                            }
+                        }
+                        ?>
                     </div><br><br><br>
 
                     <div class="field button-field">
