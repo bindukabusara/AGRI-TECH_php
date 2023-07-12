@@ -24,6 +24,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['name'] = $name;
         $_SESSION['contact'] = $contact;
 
+
         if ($role === 'farmer') {
             header("Location: famersin.php?name=$name&contact=$contact");
             exit();
@@ -36,9 +37,6 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
