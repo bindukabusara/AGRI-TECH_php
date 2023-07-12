@@ -140,7 +140,7 @@ $result = $stmt->get_result();
 
     <br><br><br><br><br><br>
     <center>
-        <h2>FARMER DATABASE TRACKING (admin view)</h2>
+        <h2>YOUR PREVISOUS ORDER</h2>
     </center>
     </div><BR>
     <center>
