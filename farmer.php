@@ -39,7 +39,6 @@ $contact = $_GET['contact'];
 $_SESSION['name'] = $name;
 $_SESSION['contact'] = $contact;
 
-
 $connection->close();
 ?>
 
